@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/door.obj-1666bb4762990fd0be440047b6c6479d.mesh"
+
+[deps]
+
+files=[ "res://.import/door.obj-1666bb4762990fd0be440047b6c6479d.mesh" ]
+
+source_file="res://Models/Walls/Wooden/door.obj"
+dest_files=[ "res://.import/door.obj-1666bb4762990fd0be440047b6c6479d.mesh", "res://.import/door.obj-1666bb4762990fd0be440047b6c6479d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
