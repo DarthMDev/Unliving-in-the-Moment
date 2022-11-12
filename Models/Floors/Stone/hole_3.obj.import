@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hole_3.obj-9fee1b2979b73aab42046ad90b7a0112.mesh"
+
+[deps]
+
+files=[ "res://.import/hole_3.obj-9fee1b2979b73aab42046ad90b7a0112.mesh" ]
+
+source_file="res://Models/Floors/Stone/hole_3.obj"
+dest_files=[ "res://.import/hole_3.obj-9fee1b2979b73aab42046ad90b7a0112.mesh", "res://.import/hole_3.obj-9fee1b2979b73aab42046ad90b7a0112.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
