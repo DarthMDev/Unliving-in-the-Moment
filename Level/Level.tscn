@@ -1,143 +1,41 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Level/Tiles/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level/tiles.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "tiles.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
 
 [node name="Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 24, 24 )
 
-[node name="Walls" type="Node2D" parent="."]
-
-[node name="Wall" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 8 )
-
-[node name="Wall2" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 24, 8 )
-
-[node name="Wall3" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 40, 8 )
-
-[node name="Wall4" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 56, 8 )
-
-[node name="Wall5" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 72, 8 )
-
-[node name="Wall6" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 88, 8 )
-
-[node name="Wall7" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 104, 8 )
-
-[node name="Wall8" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 120, 8 )
-
-[node name="Wall9" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 136, 8 )
-
-[node name="Wall10" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 152, 8 )
-
-[node name="Wall11" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 168, 8 )
-
-[node name="Wall12" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 184, 8 )
-
-[node name="Wall13" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 200, 8 )
-
-[node name="Wall14" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 216, 8 )
-
-[node name="Wall15" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 8 )
-
-[node name="Wall16" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 24 )
-
-[node name="Wall17" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 40 )
-
-[node name="Wall18" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 56 )
-
-[node name="Wall19" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 72 )
-
-[node name="Wall20" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 88 )
-
-[node name="Wall21" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 104 )
-
-[node name="Wall22" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 120 )
-
-[node name="Wall23" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 232, 136 )
-
-[node name="Wall24" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 216, 136 )
-
-[node name="Wall25" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 200, 136 )
-
-[node name="Wall26" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 184, 136 )
-
-[node name="Wall27" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 168, 136 )
-
-[node name="Wall28" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 152, 136 )
-
-[node name="Wall29" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 136, 136 )
-
-[node name="Wall30" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 120, 136 )
-
-[node name="Wall31" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 104, 136 )
-
-[node name="Wall32" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 88, 136 )
-
-[node name="Wall33" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 72, 136 )
-
-[node name="Wall34" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 56, 136 )
-
-[node name="Wall35" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 40, 136 )
-
-[node name="Wall36" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 24, 136 )
-
-[node name="Wall37" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 136 )
-
-[node name="Wall38" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 120 )
-
-[node name="Wall39" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 104 )
-
-[node name="Wall40" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 88 )
-
-[node name="Wall41" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 72 )
-
-[node name="Wall42" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 56 )
-
-[node name="Wall43" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 40 )
-
-[node name="Wall44" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 8, 24 )
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 65536, 0, 0, 65550, 0, 0, 131072, 0, 0, 131080, 0, 0, 131086, 0, 0, 196608, 0, 0, 196613, 0, 0, 196616, 0, 0, 196622, 0, 0, 262144, 0, 0, 262149, 0, 0, 262152, 0, 0, 262158, 0, 0, 327680, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327694, 0, 0, 393216, 0, 0, 393221, 0, 0, 393230, 0, 0, 458752, 0, 0, 458766, 0, 0, 524288, 0, 0, 524302, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0 )
