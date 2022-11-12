@@ -1,30 +1,24 @@
-extends Area2D
+extends KinematicBody
 
-export(int) var TILE_SIZE = 16
+export(int) var MAX_SPEED = 20
+export(int) var ACCELERATION = 5
+export(int) var FRICTION = 10
 
-var INPUTS := {
-	"player_up": Vector2.UP,
-	"player_down": Vector2.DOWN,
-	"player_left": Vector2.LEFT,
-	"player_right": Vector2.RIGHT
-}
+var velocity = Vector3.ZERO
 
-onready var ray_cast_2d := $RayCast2D
-onready var position_tween := $PositionTween
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if position_tween.is_active():
-		return
+func _physics_process(delta):
+	var x_input = Input.get_action_strength("player_right") - Input.get_action_strength("player_left")
+	var z_input = Input.get_action_strength("player_down") - Input.get_action_strength("player_up")
+	var direction = Vector3(x_input, 0, z_input).normalized()
 	
-	for input in INPUTS.keys():
-		if event.is_action_pressed(input):
-			move(INPUTS[input])
-
-
-func move(direction: Vector2):
-	ray_cast_2d.cast_to = direction * TILE_SIZE
-	ray_cast_2d.force_raycast_update()
+	if direction.x == 0:
+		velocity.x = move_toward(velocity.x, 0, FRICTION)
+	else:
+		velocity.x = move_toward(velocity.x, direction.x * MAX_SPEED, ACCELERATION)
 	
-	if not ray_cast_2d.is_colliding():
-		position_tween.move(position, direction)
+	if direction.z == 0:
+		velocity.z = move_toward(velocity.z, 0, FRICTION)
+	else:
+		velocity.z = move_toward(velocity.z, direction.z * MAX_SPEED, ACCELERATION)
+	
+	velocity = move_and_slide(velocity)
