@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cloth.obj-cb378a79043a75ea5672600e12f173b7.mesh"
+
+[deps]
+
+files=[ "res://.import/cloth.obj-cb378a79043a75ea5672600e12f173b7.mesh" ]
+
+source_file="res://Entities/Player/cloth.obj"
+dest_files=[ "res://.import/cloth.obj-cb378a79043a75ea5672600e12f173b7.mesh", "res://.import/cloth.obj-cb378a79043a75ea5672600e12f173b7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
