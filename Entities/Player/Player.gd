@@ -5,10 +5,27 @@ export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
 export(int) var GRAVITY = 1
 
-onready var CLOTH = $Cloth
-onready var MESH_INSTANCE = $MeshInstance
+export(float) var alpha = 1.0
 
+onready var CLOTH: SoftBody = $ClothRotation/Cloth
+onready var CLOTH_ROTATION = $ClothRotation
+onready var ANIMATION_PLAYER = $AnimationPlayer
+
+var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
+
+
+func _ready():
+	material.flags_transparent = true
+	CLOTH.material_override = material
+
+
+func _process(delta):
+	if Input.is_action_just_pressed("ethereal"):
+		ANIMATION_PLAYER.play("Ethereal")
+	
+	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
+
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("player_right") - Input.get_action_strength("player_left")
@@ -31,4 +48,4 @@ func _physics_process(delta):
 	
 	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
 	
-	MESH_INSTANCE.rotation.y = lerp_angle(MESH_INSTANCE.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
+	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
