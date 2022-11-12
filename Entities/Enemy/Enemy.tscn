@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 1.03558, 1 )
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4016, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+
+[node name="Navigation" type="Navigation" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
