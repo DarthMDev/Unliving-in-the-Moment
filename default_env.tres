@@ -10,3 +10,5 @@ background_sky = SubResource( 1 )
 ambient_light_color = Color( 0.796078, 0.666667, 0.568627, 1 )
 ambient_light_energy = 1.28
 tonemap_mode = 3
+ss_reflections_enabled = true
+ssao_enabled = true
