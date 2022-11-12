@@ -4,6 +4,9 @@ export(int) var MAX_SPEED = 10
 export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
 
+onready var CLOTH = $Cloth
+onready var MESH_INSTANCE = $MeshInstance
+
 var velocity = Vector3.ZERO
 
 func _physics_process(delta):
@@ -22,3 +25,9 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, direction.z * MAX_SPEED, ACCELERATION)
 	
 	velocity = move_and_slide(velocity)
+	
+	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
+	
+	MESH_INSTANCE.rotation.y = lerp_angle(MESH_INSTANCE.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
+
+	
