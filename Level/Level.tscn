@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Models/Floors/Stone/stone_floor.tres" type="Material" id=2]
@@ -6,6 +6,14 @@
 [ext_resource path="res://Models/Walls/Wooden/wooden_wall.tres" type="Material" id=4]
 [ext_resource path="res://Models/Walls/Wooden/wooden_wall_corner_inner.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://Models/Walls/Wooden/wooden_wall_full.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/Decoration/Rocks/rocks.tres" type="Material" id=7]
+[ext_resource path="res://Models/Decoration/Rocks/rocks.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://Models/Decoration/Bones/Scenes/bone_pile.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Models/Decoration/Bones/bone.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://Models/Floors/Stone/dark.tres" type="Material" id=11]
+[ext_resource path="res://Models/Floors/Stone/hole_6.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://Models/Floors/Stone/hole_0.obj" type="ArrayMesh" id=14]
+[ext_resource path="res://Models/Floors/Stone/hole_5.obj" type="ArrayMesh" id=17]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -219,16 +227,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 8 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 2 )
 
-[node name="stone_floor41" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 12 )
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 2 )
-
-[node name="stone_floor42" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 12 )
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 2 )
-
 [node name="stone_floor43" type="MeshInstance" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 12 )
 mesh = ExtResource( 3 )
@@ -241,21 +239,6 @@ material/0 = ExtResource( 2 )
 
 [node name="stone_floor45" type="MeshInstance" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 12 )
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 2 )
-
-[node name="stone_floor46" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 16 )
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 2 )
-
-[node name="stone_floor47" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 16 )
-mesh = ExtResource( 3 )
-material/0 = ExtResource( 2 )
-
-[node name="stone_floor48" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 16 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 2 )
 
@@ -287,64 +270,86 @@ material/1 = ExtResource( 4 )
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
+
+[node name="wooden_wall_full10" type="MeshInstance" parent="Walls"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 2 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full11" type="MeshInstance" parent="Walls"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 6 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full12" type="MeshInstance" parent="Walls"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 10 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full13" type="MeshInstance" parent="Walls"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 14 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full14" type="MeshInstance" parent="Walls"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 37, 0, 14 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full15" type="MeshInstance" parent="Walls"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 37, 0, 10 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full16" type="MeshInstance" parent="Walls"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 37, 0, 6 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
+
+[node name="wooden_wall_full17" type="MeshInstance" parent="Walls"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 37, 0, 2 )
+mesh = ExtResource( 6 )
+skeleton = NodePath("../..")
 
 [node name="wooden_wall_full2" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full3" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full4" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full5" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full6" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full7" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full8" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="wooden_wall_full9" type="MeshInstance" parent="Walls"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34, 0, -1 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 4 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
 transform = Transform( 1.776, 0, 0, 0, 0.8, 0, 0, 0, -1.4848, -5, 1, 0 )
@@ -355,3 +360,72 @@ material/0 = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/StaticBody"]
 shape = SubResource( 4 )
+
+[node name="rocks" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 7 )
+
+[node name="rocks2" type="MeshInstance" parent="."]
+transform = Transform( -0.965926, 0.258819, 0, -0.258819, -0.965926, 0, 0, 0, 1, 21, 0, 4 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 7 )
+
+[node name="rocks4" type="MeshInstance" parent="."]
+transform = Transform( -0.836516, 0.224144, 0.5, -0.258819, -0.965926, 0, 0.482963, -0.12941, 0.866025, 13, 0, 14 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 7 )
+
+[node name="rocks3" type="MeshInstance" parent="."]
+transform = Transform( -0.258819, -0.965926, 4.2222e-08, 4.47035e-08, 3.72529e-08, 1, -0.965926, 0.258819, 2.98023e-08, 9, -1.60361, 3 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 7 )
+
+[node name="bone" type="MeshInstance" parent="."]
+transform = Transform( 0.130632, 0, -0.213155, 0, 0.25, 0, 0.213155, 0, 0.130632, 2.78335, 0, 4.00242 )
+mesh = ExtResource( 10 )
+
+[node name="bone2" type="MeshInstance" parent="."]
+transform = Transform( 0.130632, 0, -0.213155, 0, 0.25, 0, 0.213155, 0, 0.130632, 30.6736, 0, 10.0501 )
+mesh = ExtResource( 10 )
+
+[node name="bone3" type="MeshInstance" parent="."]
+transform = Transform( 0.162958, 0, 0.18959, 0, 0.25, 0, -0.18959, 0, 0.162958, 16.6136, 0, 15.0585 )
+mesh = ExtResource( 10 )
+
+[node name="bone_pile" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.72263, 0, 8.67931 )
+
+[node name="bone_pile2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 18.2902, 0, 1.99767 )
+
+[node name="bone_pile3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 33.2173, -9.53674e-07, 11.9412 )
+
+[node name="hole_0" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -4.47035e-08, 16 )
+mesh = ExtResource( 14 )
+skeleton = NodePath("../stone_floor33")
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 11 )
+
+[node name="hole_8" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -4.47035e-08, 12 )
+mesh = ExtResource( 14 )
+skeleton = NodePath("../stone_floor33")
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 11 )
+
+[node name="hole_5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -4.47035e-08, 12 )
+mesh = ExtResource( 17 )
+skeleton = NodePath("../stone_floor33")
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 11 )
+
+[node name="hole_6" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -4.47035e-08, 16 )
+mesh = ExtResource( 12 )
+skeleton = NodePath("../stone_floor33")
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 11 )

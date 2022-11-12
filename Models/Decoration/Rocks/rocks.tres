@@ -1,6 +1,6 @@
 [gd_resource type="SpatialMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://Models/Pillars/Brick/brick_pillar.png" type="Texture" id=1]
+[ext_resource path="res://Models/Decoration/Rocks/Rocks.png" type="Texture" id=1]
 
 [resource]
 albedo_texture = ExtResource( 1 )

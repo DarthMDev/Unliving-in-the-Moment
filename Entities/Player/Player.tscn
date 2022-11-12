@@ -17,5 +17,5 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 10, 5 )
-size = 10.0
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 15.8707, 9.09111 )
+size = 20.0

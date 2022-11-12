@@ -1,7 +1,7 @@
 extends KinematicBody
 
-export(int) var MAX_SPEED = 20
-export(int) var ACCELERATION = 5
+export(int) var MAX_SPEED = 10
+export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
 
 var velocity = Vector3.ZERO
