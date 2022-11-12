@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Models/Decoration/Bones/bone.obj" type="ArrayMesh" id=1]
+
+[node name="BonePile" type="Spatial"]
+
+[node name="Bone1" type="MeshInstance" parent="."]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
+mesh = ExtResource( 1 )
+
+[node name="Bone2" type="MeshInstance" parent="."]
+transform = Transform( 0.135947, -0.0151643, 0.133259, 0.0101792, 0.187384, 0.0115715, -0.138025, -0.00111668, 0.132106, 0.818, 0, 0.312 )
+mesh = ExtResource( 1 )
+
+[node name="Bone3" type="MeshInstance" parent="."]
+transform = Transform( 0.150201, -0.000314835, -0.118984, 0.0101792, 0.187384, 0.0115715, 0.122359, -0.0152021, 0.145096, 0.352, 0, 1.044 )
+mesh = ExtResource( 1 )
+
+[node name="Bone4" type="MeshInstance" parent="."]
+transform = Transform( 0.121323, -0.0601925, -0.210137, 0.0300962, 0.242646, -0.0521283, 0.216506, 0, 0.125, 0.012, 0.175, 0 )
+mesh = ExtResource( 1 )

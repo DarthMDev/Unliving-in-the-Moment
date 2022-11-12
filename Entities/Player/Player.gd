@@ -3,6 +3,7 @@ extends KinematicBody
 export(int) var MAX_SPEED = 10
 export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
+export(int) var GRAVITY = 1
 
 onready var CLOTH = $Cloth
 onready var MESH_INSTANCE = $MeshInstance
@@ -24,10 +25,10 @@ func _physics_process(delta):
 	else:
 		velocity.z = move_toward(velocity.z, direction.z * MAX_SPEED, ACCELERATION)
 	
-	velocity = move_and_slide(velocity)
+	velocity.y += -GRAVITY
+	
+	velocity = move_and_slide(velocity, Vector3.UP, true, 4, deg2rad(45))
 	
 	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
 	
 	MESH_INSTANCE.rotation.y = lerp_angle(MESH_INSTANCE.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
-
-	
