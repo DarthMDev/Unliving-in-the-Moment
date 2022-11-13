@@ -13,12 +13,20 @@ onready var CLOTH_ROTATION = $ClothRotation
 onready var ETHEREAL_PLAYER = $EtherealPlayer
 onready var ROCKET_LAUNCHER_PLAYER = $RocketLauncherPlayer
 
+onready var ROCKET_LAUNCHER_MESH = $ClothRotation/RocketLauncherMesh
+
 onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
 
+var lastOnGroundPos = Vector3.ZERO
+var lastOnGroundVel = Vector3.ZERO
 var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
 var player = self
 var hidden_mouse = false
+var iframes = 0
+
+var knockback_timer = 0
+
 onready var ui = $UserInterface
 onready var livesSprite = $"CanvasLayer/UserInterface/LivesCounter/Sprite"
 var livesToY = {
@@ -32,8 +40,6 @@ func _ready():
 	CLOTH.material_override = material
 
 	# hide the cursor
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	hidden_mouse = true
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
 		ETHEREAL_PLAYER.play("Ethereal")
@@ -63,6 +69,9 @@ func _process(delta):
 
 
 func _physics_process(delta):
+	if iframes > 0:
+		iframes -= delta
+		
 	var x_input = Input.get_action_strength("player_right") - Input.get_action_strength("player_left")
 	var z_input = Input.get_action_strength("player_down") - Input.get_action_strength("player_up")
 	var direction = Vector3(x_input, 0, z_input).normalized()
@@ -79,19 +88,52 @@ func _physics_process(delta):
 	
 	velocity.y += -GRAVITY
 	
-	velocity = move_and_slide(velocity, Vector3.UP, true, 4, deg2rad(45))
-	
-	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
-	
-	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
+	if knockback_timer <= 0:
+		velocity = lerp(velocity, move_and_slide(velocity * (2.0 if alpha < 1 else 1.0), Vector3.UP, true, 4, deg2rad(45)), delta * 5)
+	else:
+		knockback_timer-= delta
+		move_and_slide(velocity, Vector3.UP, true, 4, deg2rad(45))
+		
+	var mousePos = getMousePosition3D()
+	var mouseDelta = mousePos - translation
 
+	var angle = atan2(mouseDelta.x, mouseDelta.z);
+
+	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, angle, delta * 3)
+
+	ROCKET_LAUNCHER_MESH.rotation.y = angle - CLOTH_ROTATION.rotation.y + deg2rad(90)
+	
+	if velocity.y >= 0:
+		lastOnGroundPos = Vector3(player.translation.x, player.global_translation.y, player.global_translation.z)
+		lastOnGroundVel = Vector3(velocity.x, velocity.y, velocity.z)
 	# if the player is below the ground respawn them back at their previous position
-	if player.translation.y < -50:
+	elif player.global_translation.y < -10:
 		# reset the scene
 		# get_tree().reload_current_scene()
-		player.translation = Vector3(1, 1, 1)
-		# TODO reset the player position nearest to their last position on the ground
 
+		player.global_translation = lastOnGroundPos
+		velocity = -lastOnGroundVel * 3
+		
+		fall_damage()
+		# minus_lives(1)
+    
+		player.translation = Vector3(1, 1, 1)
+
+		# TODO reset the player position nearest to their last position on the ground
+	
+func getMousePosition3D():
+
+	var spaceState = get_world().direct_space_state
+
+	var mousePos = get_viewport().get_mouse_position()
+	var camera = get_tree().root.get_camera()
+	var rayOrigin = camera.project_ray_origin(mousePos)
+	var rayEnd = rayOrigin + camera.project_ray_normal(mousePos) * 2000
+	var rayArray = spaceState.intersect_ray(rayOrigin, rayEnd)
+
+	if rayArray.has("position"):
+		return rayArray["position"]
+	return Vector3()
 
 func checkLives():
 	if lives == 0:
@@ -106,9 +148,15 @@ func checkLives():
 		# get_tree().reload_current_scene()
 	livesSprite.region_rect  =  Rect2(0, livesToY[lives], 33, 11)
 
-func damage(amount):
-	lives -= amount
+func fall_damage():
+	lives -= 1
 	checkLives()
+
+func damage(amount):
+	if iframes <= 0:
+		lives -= amount
+		checkLives()
+		iframes = 0.1
 
 func get_lives():
 	return lives
