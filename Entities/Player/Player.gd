@@ -1,5 +1,4 @@
 class_name Player
-
 extends KinematicBody
 
 export(int) var MAX_SPEED = 10
@@ -91,7 +90,6 @@ func _physics_process(delta):
 		# reset the scene
 		# get_tree().reload_current_scene()
 		player.translation = Vector3(1, 1, 1)
-		# minus_lives(1)
 		# TODO reset the player position nearest to their last position on the ground
 
 
@@ -102,19 +100,15 @@ func checkLives():
 		# Game over
 	elif lives > MAX_LIVES:
 		lives = MAX_LIVES
-
 	else:
 		# Respawn and update lives GUI
 		pass
 		# get_tree().reload_current_scene()
-
 	livesSprite.region_rect  =  Rect2(0, livesToY[lives], 33, 11)
 
-func minus_lives(amount):
+func damage(amount):
 	lives -= amount
 	checkLives()
-
-
 
 func get_lives():
 	return lives
