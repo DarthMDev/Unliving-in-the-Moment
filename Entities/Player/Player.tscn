@@ -16,6 +16,7 @@ flags_transparent = true
 
 [sub_resource type="Animation" id=4]
 resource_name = "Ethereal"
+length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:alpha")
 tracks/0/interp = 1
