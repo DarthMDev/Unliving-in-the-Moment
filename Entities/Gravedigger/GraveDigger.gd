@@ -79,15 +79,14 @@ func do_animations(delta):
 	var canSeePlayer = target.alpha >= 1.0
 	
 	if state == STATE_SPEECH:
-		set_state(STATE_IDLE)
-		if false:
-			if !$AudioStreamPlayer.playing:
-				$AudioStreamPlayer.play()
-			
-			if time_in_state > 23:
-				global_translation += Vector3(0, 10, 0)
-				set_state(STATE_FOLLOWING)
-				$AudioStreamPlayer.stop()
+		
+		if !$AudioStreamPlayer.playing:
+			$AudioStreamPlayer.play()
+		
+		if time_in_state > 23:
+			global_translation += Vector3(0, 10, 0)
+			set_state(STATE_FOLLOWING)
+			$AudioStreamPlayer.stop()
 			
 	elif state == STATE_IDLE:
 		ANIM_IDLE.get_parent().visible = true

@@ -485,4 +485,3 @@ skeleton = NodePath("../..")
 
 [node name="Gravedigger" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14 )
-AREAPATH = NodePath("")
