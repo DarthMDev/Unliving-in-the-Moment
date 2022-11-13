@@ -14,4 +14,4 @@ func _physics_process(delta):
 	if collision:
 		if collision.collider is Player:
 			collision.collider.damage(dmg)
-			queue_free()
+		queue_free()

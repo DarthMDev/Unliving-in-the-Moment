@@ -83,7 +83,7 @@ func do_animations(delta):
 		if !$AudioStreamPlayer.playing:
 			$AudioStreamPlayer.play()
 		
-		if time_in_state > 23:
+		if time_in_state > 21.35:
 			global_translation += Vector3(0, 10, 0)
 			set_state(STATE_FOLLOWING)
 			$AudioStreamPlayer.stop()

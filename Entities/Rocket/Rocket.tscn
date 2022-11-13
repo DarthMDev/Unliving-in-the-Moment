@@ -16,12 +16,12 @@ initial_velocity = 1.0
 scale = 2.0
 scale_random = 1.0
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=13]
 flags_transparent = true
 albedo_color = Color( 1, 0.925, 0.7, 0.313726 )
 
 [sub_resource type="SphereMesh" id=3]
-material = SubResource( 4 )
+material = SubResource( 13 )
 
 [sub_resource type="SpatialMaterial" id=6]
 flags_transparent = true

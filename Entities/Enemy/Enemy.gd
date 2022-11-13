@@ -207,5 +207,12 @@ func _on_Timer2_timeout():
 func damage(dmg):
 	health -= dmg
 	if health <= 0:
-		# TODO play death animation
-		self.queue_free()
+		$DeathTimer.start()
+		$Particles.emitting = true
+		$CollisionShape.disabled = true
+		$MeshInstance.visible = false
+		shots = 0
+		clip = 0
+
+func _on_DeathTimer_timeout():
+	queue_free()

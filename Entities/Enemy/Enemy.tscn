@@ -1,12 +1,26 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Entities/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Skeleton/skeleton_idle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Skeleton/skeleton_equip_glonk.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Skeleton/skeleton_march.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/Skeleton/skeleton_shoot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entities/Skeleton/Material_006.material" type="Material" id=6]
 
 [sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="ParticlesMaterial" id=5]
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, -0.25, 0 )
+initial_velocity = 1.0
+scale = 2.0
+scale_random = 1.0
+
+[sub_resource type="SphereMesh" id=6]
+material = ExtResource( 6 )
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 2
@@ -14,7 +28,7 @@ collision_mask = 7
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1, 0 )
+transform = Transform( 2.25, 0, 0, 0, -6.55671e-08, -1.5, 0, 2.25, -9.83506e-08, 0, 1, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -47,6 +61,19 @@ wait_time = 6.0
 one_shot = true
 autostart = true
 
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0895381, 2, 0 )
+emitting = false
+lifetime = 2.0
+one_shot = true
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 6 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="velocity_computed" from="agent" to="." method="_on_agent_velocity_computed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

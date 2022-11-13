@@ -26,7 +26,7 @@ func _process(delta):
 func _on_Area_body_entered(body: Node) -> void:
 	if body is Player && $CollisionShape.disabled == false:
 		if body.alpha >= 1.0 && hitTimer <= 0:
-			body.minus_lives(1)
+			body.damage(1)
 			body.velocity = velocity * 50
 			body.knockback_timer = 1.0
 			hitTimer = 1.0

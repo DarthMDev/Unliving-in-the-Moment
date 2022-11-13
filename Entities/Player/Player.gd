@@ -50,14 +50,6 @@ func _process(delta):
 		# reset the scene
 		get_tree().reload_current_scene()
 		# TODO add death screen
-		
-	# if esc is pressed show the mouse again
-	if Input.is_action_just_pressed("ui_cancel") and hidden_mouse == true:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		hidden_mouse = false
-	elif Input.is_action_just_pressed("ui_cancel") and hidden_mouse == false:
-		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-		hidden_mouse = true
 
 	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing():
 		var rocket = ROCKET_SCENE.instance()
@@ -116,7 +108,7 @@ func _physics_process(delta):
 		
 		fall_damage()
 		# minus_lives(1)
-    
+	
 		player.translation = Vector3(1, 1, 1)
 
 		# TODO reset the player position nearest to their last position on the ground
