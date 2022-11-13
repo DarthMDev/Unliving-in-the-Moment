@@ -26,12 +26,12 @@ polygons = [ PoolIntArray( 2, 1, 0 ), PoolIntArray( 5, 4, 3 ), PoolIntArray( 8, 
 
 [node name="Enemy" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.892, 1, 14.22 )
-AREAPATH = NodePath("Area2")
+AREAPATH = NodePath("Area")
 
-[node name="Area2" type="Area" parent="Enemy"]
+[node name="Area" type="Area" parent="Enemy"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0777035, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Enemy/Area2"]
+[node name="CollisionShape" type="CollisionShape" parent="Enemy/Area"]
 transform = Transform( 50, 0, 0, 0, 3, 0, 0, 0, 50, 0, 0, 0 )
 shape = SubResource( 2 )
 

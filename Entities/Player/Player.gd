@@ -7,8 +7,10 @@ export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
 export(int) var GRAVITY = 1
 export (int) var HEALTH = 100
-
+export (int) var MAX_HEALTH = 100
 export(float) var alpha = 1.0
+export (int) var LIVES = 3
+export (int) var MAX_LIVES = 3
 
 onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
@@ -19,13 +21,15 @@ onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
 var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
 var player = self
-
+var hidden_mouse = false
 
 func _ready():
 	material.flags_transparent = true
 	CLOTH.material_override = material
 
-
+	# hide the cursor
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	hidden_mouse = true
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
 		ANIMATION_PLAYER.play("Ethereal")
@@ -36,6 +40,15 @@ func _process(delta):
 		# reset the scene
 		get_tree().reload_current_scene()
 		# TODO add death screen
+		LIVES -= 1
+	# if esc is pressed show the mouse again
+	if Input.is_action_just_pressed("ui_cancel") and hidden_mouse == true:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		hidden_mouse = false
+	elif Input.is_action_just_pressed("ui_cancel") and hidden_mouse == false:
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+		hidden_mouse = true
+
 	if Input.is_action_just_pressed("shoot"):
 		var rocket = ROCKET_SCENE.instance()
 		rocket.init($ClothRotation/RocketMesh.global_translation, $ClothRotation/RocketMesh.global_rotation)
