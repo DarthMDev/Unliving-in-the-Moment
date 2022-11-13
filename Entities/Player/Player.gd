@@ -1,13 +1,61 @@
+class_name Player
+
 extends KinematicBody
 
 export(int) var MAX_SPEED = 10
 export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
+export(int) var GRAVITY = 1
+export (int) var HEALTH = 100
+export (int) var MAX_HEALTH = 100
+export(float) var alpha = 1.0
+export (int) var LIVES = 3
+export (int) var MAX_LIVES = 3
 
-onready var CLOTH = $Cloth
-onready var MESH_INSTANCE = $MeshInstance
+onready var CLOTH: SoftBody = $ClothRotation/Cloth
+onready var CLOTH_ROTATION = $ClothRotation
+onready var ANIMATION_PLAYER = $AnimationPlayer
 
+onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
+
+var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
+var player = self
+var hidden_mouse = false
+
+func _ready():
+	material.flags_transparent = true
+	CLOTH.material_override = material
+
+	# hide the cursor
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	hidden_mouse = true
+func _process(delta):
+	if Input.is_action_just_pressed("ethereal"):
+		ANIMATION_PLAYER.play("Ethereal")
+	if HEALTH == 0:
+		# TODO add death animation
+		# ANIMATION_PLAYER.play('Death')
+		# TODO add death sound effect
+		# reset the scene
+		get_tree().reload_current_scene()
+		# TODO add death screen
+		LIVES -= 1
+	# if esc is pressed show the mouse again
+	if Input.is_action_just_pressed("ui_cancel") and hidden_mouse == true:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		hidden_mouse = false
+	elif Input.is_action_just_pressed("ui_cancel") and hidden_mouse == false:
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+		hidden_mouse = true
+
+	if Input.is_action_just_pressed("shoot"):
+		var rocket = ROCKET_SCENE.instance()
+		rocket.init($ClothRotation/RocketMesh.global_translation, $ClothRotation/RocketMesh.global_rotation)
+		get_parent().add_child(rocket)
+	
+	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
+
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("player_right") - Input.get_action_strength("player_left")
@@ -24,10 +72,38 @@ func _physics_process(delta):
 	else:
 		velocity.z = move_toward(velocity.z, direction.z * MAX_SPEED, ACCELERATION)
 	
-	velocity = move_and_slide(velocity)
+	velocity.y += -GRAVITY
+	
+	velocity = move_and_slide(velocity, Vector3.UP, true, 4, deg2rad(45))
 	
 	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
 	
-	MESH_INSTANCE.rotation.y = lerp_angle(MESH_INSTANCE.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
+	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
 
-	
+	# if the player is below the ground respawn them back at their previous position
+	if player.translation.y < -50:
+		# reset the scene
+		get_tree().reload_current_scene()
+		# TODO reset the player position nearest to their last position on the ground
+		
+
+func change_health(amount):
+	health += amount
+	if health = clamp(health, 0, health_max):
+		health = 0
+		lives -= 1
+		checkLives()
+	else:
+		# Update health bar
+		
+func checkLives():
+	if lives = clamp(lives, 0, lives_max):
+		lives = 0
+		# Game over
+	else:
+		# Respawn and update lives GUI
+		get_tree().reload_current_scene()
+
+func change_lives(amount):
+	lives += amount
+	checkLives()

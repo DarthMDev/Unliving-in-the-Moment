@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Weapons/Rocket Launcher/rocket.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Entities/Rocket/Rocket.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 7.0
+
+[sub_resource type="ParticlesMaterial" id=2]
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 2.0
+direction = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, -0.25, 0 )
+initial_velocity = 1.0
+scale = 2.0
+scale_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+albedo_color = Color( 1, 0.925, 0.7, 0.313726 )
+
+[sub_resource type="SphereMesh" id=3]
+material = SubResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=6]
+flags_transparent = true
+albedo_color = Color( 1, 0.631373, 0.372549, 0.313726 )
+
+[sub_resource type="SphereMesh" id=5]
+material = SubResource( 6 )
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_transparent = true
+albedo_color = Color( 0.992157, 0.870588, 0.521569, 0.313726 )
+
+[sub_resource type="SphereMesh" id=8]
+material = SubResource( 7 )
+
+[sub_resource type="SpatialMaterial" id=9]
+flags_transparent = true
+albedo_color = Color( 0.27451, 0.203922, 0.290196, 0.313726 )
+
+[sub_resource type="SphereMesh" id=10]
+material = SubResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=11]
+flags_transparent = true
+albedo_color = Color( 0.105882, 0.12549, 0.196078, 0.313726 )
+
+[sub_resource type="SphereMesh" id=12]
+material = SubResource( 11 )
+
+[node name="Rocket" type="KinematicBody"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, -0.5, 0.5 )
+collision_layer = 3
+collision_mask = 3
+axis_lock_motion_y = true
+move_lock_y = true
+script = ExtResource( 2 )
+SPEED = 20
+PARTICLES = [ NodePath("Particles"), NodePath("Particles2"), NodePath("Particles3"), NodePath("Particles4"), NodePath("Particles5") ]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.1638, 0, -0.2, 0, -8.74228e-09, -1.5, 0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2, 0 )
+emitting = false
+amount = 3
+lifetime = 0.5
+one_shot = true
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 3 )
+
+[node name="Particles2" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
+emitting = false
+amount = 3
+lifetime = 0.5
+one_shot = true
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 5 )
+
+[node name="Particles3" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
+emitting = false
+amount = 3
+lifetime = 0.5
+one_shot = true
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 8 )
+
+[node name="Particles4" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
+emitting = false
+amount = 3
+lifetime = 0.5
+one_shot = true
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 10 )
+
+[node name="Particles5" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
+emitting = false
+amount = 3
+lifetime = 0.5
+one_shot = true
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 12 )
+
+[node name="ParticleTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="ParticleTimer" to="." method="_on_ParticleTimer_timeout"]
