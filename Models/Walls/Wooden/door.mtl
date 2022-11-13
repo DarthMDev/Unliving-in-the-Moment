@@ -1,7 +1,7 @@
 # Blender MTL File: 'wood_wall.blend'
 # Material Count: 1
 
-newmtl Material
+newmtl Material.005
 Ns 0.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
