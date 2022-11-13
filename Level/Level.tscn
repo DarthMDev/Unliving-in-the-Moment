@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Models/Walls/Wooden/WoodenWallFull.tscn" type="PackedScene" id=2]
@@ -12,215 +12,227 @@
 [ext_resource path="res://Models/Walls/Fence/FenceEnd.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Models/Walls/Stone/StoneWall.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Models/Decoration/Skull/Skull.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Entities/Enemy/Enemy.tscn" type="PackedScene" id=13]
+
+[sub_resource type="NavigationMesh" id=1]
+vertices = PoolVector3Array( 9, 0.497098, 0.748066, 9, 0.497098, 4.49807, 10.25, 0.497098, 4.49807, 22, 0.497098, 5.49807, 23.5, 0.497098, 5.49807, 23.25, 0.497098, 0.748066, 21.75, 0.497098, 6.24807, 22, 0.497098, 5.49807, 23.25, 0.497098, 0.748066, 9, 0.497098, 0.748066, 10.25, 0.497098, 4.49807, 11, 0.497098, 6.24807, 21.75, 0.497098, 6.24807, 23.25, 0.497098, 0.748066, 16, 0.497098, 0.498066, 6.25, 0.497098, 9.74807, 7, 0.497098, 9.74807, 8, 0.497098, 8.49807, 6.25, 0.497098, 9.74807, 8, 0.497098, 8.49807, 7, 0.497098, 7.49807, 3.25, 0.497098, 9.49807, 3.75, 0.497098, 10.7481, 3.75, 0.497098, 10.7481, 6.25, 0.747098, 10.7481, 6.25, 0.497098, 9.74807, 1.75, 0.497098, 9.49807, 3.25, 0.497098, 9.49807, 7, 0.497098, 7.49807, 7, 0.497098, 5.24807, -1.5, 0.497098, 10.9981, 1.25, 0.497098, 10.9981, 1.75, 0.497098, 9.49807, 8, 0.497098, 4.49807, 9, 0.497098, 4.49807, 9, 0.497098, 0.748066, -1.5, 0.497098, 0.748066, -1.5, 0.497098, 10.9981, 1.75, 0.497098, 9.49807, 7, 0.497098, 5.24807, 9, 0.497098, 0.748066, 7, 0.497098, 5.24807, 8, 0.497098, 4.49807, 9, 0.497098, 0.748066, 27.25, 0.497098, 5.74807, 27.25, 0.497098, 6.99807, 27.5, 0.497098, 6.99807, 27.5, 0.497098, 5.49807, 26.5, 0.497098, 5.24807, 29.25, 0.497098, 0.748066, 23.25, 0.497098, 0.748066, 23.5, 0.497098, 5.49807, 26.5, 0.497098, 5.24807, 27.25, 0.497098, 5.74807, 27.5, 0.497098, 5.49807, 26.5, 0.497098, 5.24807, 27.5, 0.497098, 5.49807, 29.25, 0.497098, 5.24807, 29.25, 0.497098, 0.748066, 31.5, 0.497098, 6.24807, 31.75, 0.497098, 7.49807, 33.5, 0.497098, 7.49807, 33.5, 0.497098, 0.748066, 29.25, 0.497098, 5.24807, 30.25, 0.497098, 6.24807, 31.5, 0.497098, 6.24807, 33.5, 0.497098, 0.748066, 29.25, 0.497098, 0.748066, 8.5, 9.4971, 5.99807, 8.5, 9.4971, 6.99807, 9.5, 9.4971, 6.99807, 9.5, 9.4971, 5.99807, 8.75, 1.4971, 6.24807, 8.75, 1.4971, 6.74807, 9.25, 1.4971, 6.74807, 9.25, 1.4971, 6.24807, 29.5, 1.7471, 7.74807, 30.5, 1.4971, 7.24807, 29.25, 1.7471, 7.24807, 27.5, 0.497098, 7.74807, 27.5, 0.497098, 6.99807, 27.25, 0.497098, 6.99807, 27.25, 0.497098, 8.24807, 28, 0.497098, 9.49807, 28, 0.997098, 8.49807, 27.25, 0.497098, 8.24807, 26.5, 0.497098, 8.74807, 31, 0.747098, 9.49807, 30.25, 1.2471, 9.49807, 30.25, 0.747098, 10.2481, 29, 1.7471, 8.49807, 29, 1.2471, 9.24807, 29.75, 1.4971, 9.24807, 29.5, 1.7471, 7.74807, 33.5, 0.497098, 7.49807, 31.5, 0.747098, 8.49807, 31, 0.747098, 9.49807, 31.5, 0.747098, 8.49807, 31, 0.497098, 8.49807, 31, 0.747098, 9.49807, 29, 0.497098, 10.2481, 29, 0.997098, 9.49807, 28, 0.497098, 9.49807, 29.25, 1.7471, 7.24807, 29, 1.2471, 6.24807, 28.5, 1.2471, 6.24807, 28.5, 1.4971, 7.74807, 33.5, 0.497098, 7.49807, 31, 0.747098, 9.49807, 30.25, 0.747098, 10.2481, 33.5, 0.497098, 19.4981, 29, 1.7471, 8.49807, 29.5, 1.7471, 7.74807, 29.25, 1.7471, 7.24807, 28.5, 1.4971, 7.74807, 28, 0.997098, 8.49807, 29, 0.497098, 10.2481, 28, 0.497098, 9.49807, 26.5, 0.497098, 8.74807, 23.75, 0.497098, 8.74807, 23.5, 0.497098, 19.4981, 33.5, 0.497098, 19.4981, 33.5, 0.497098, 7.49807, 31.75, 0.497098, 7.49807, 31.5, 0.747098, 8.49807, 28, 0.997098, 8.49807, 28.5, 1.4971, 7.74807, 27.5, 0.497098, 7.74807, 27.25, 0.497098, 8.24807, 33.5, 0.497098, 19.4981, 30.25, 0.747098, 10.2481, 29, 0.497098, 10.2481, 22.75, 3.4971, 6.74807, 22.75, 3.4971, 7.24807, 26.25, 3.4971, 7.24807, 26.25, 3.4971, 6.74807, 7, 0.497098, 9.74807, 7, 0.747098, 10.2481, 7.5, 0.497098, 10.2481, 8, 0.497098, 8.49807, 23.5, 0.497098, 19.4981, 23.75, 0.497098, 8.74807, 22.25, 0.497098, 8.74807, 8, 0.497098, 8.49807, 7.5, 0.497098, 10.2481, 7.5, 0.497098, 11.2481, 10, 0.497098, 8.49807, 22.25, 0.497098, 8.74807, 21.75, 0.497098, 7.74807, 10.75, 0.497098, 7.74807, 7.5, 0.497098, 11.2481, 15.25, 0.497098, 19.4981, 23.5, 0.497098, 19.4981, 10.75, 0.497098, 7.74807, 10, 0.497098, 8.49807, 7.5, 0.497098, 11.2481, 7.5, 0.497098, 11.2481, 7, 0.497098, 11.4981, 7, 0.497098, 19.4981, 15.25, 0.497098, 19.4981, 6.25, 0.497098, 11.4981, 6.25, 0.747098, 10.7481, 3.75, 0.497098, 10.7481, 3.25, 0.497098, 12.2481, -1.5, 0.497098, 19.4981, 7, 0.497098, 19.4981, 3.25, 0.497098, 12.2481, 1.75, 0.497098, 12.2481, 1.75, 0.497098, 12.2481, 1.25, 0.497098, 10.9981, -1.5, 0.497098, 10.9981, -1.5, 0.497098, 19.4981, 7, 0.497098, 11.4981, 6.25, 0.497098, 11.4981, 3.25, 0.497098, 12.2481, 7, 0.497098, 19.4981 )
+polygons = [ PoolIntArray( 2, 1, 0 ), PoolIntArray( 5, 4, 3 ), PoolIntArray( 8, 7, 6 ), PoolIntArray( 10, 9, 11 ), PoolIntArray( 11, 9, 14 ), PoolIntArray( 11, 14, 12 ), PoolIntArray( 12, 14, 13 ), PoolIntArray( 17, 16, 15 ), PoolIntArray( 19, 18, 20 ), PoolIntArray( 20, 18, 21 ), PoolIntArray( 21, 18, 22 ), PoolIntArray( 25, 24, 23 ), PoolIntArray( 27, 26, 28 ), PoolIntArray( 28, 26, 29 ), PoolIntArray( 32, 31, 30 ), PoolIntArray( 35, 34, 33 ), PoolIntArray( 38, 37, 39 ), PoolIntArray( 39, 37, 40 ), PoolIntArray( 40, 37, 36 ), PoolIntArray( 43, 42, 41 ), PoolIntArray( 45, 44, 46 ), PoolIntArray( 46, 44, 47 ), PoolIntArray( 51, 50, 48 ), PoolIntArray( 48, 50, 49 ), PoolIntArray( 54, 53, 52 ), PoolIntArray( 56, 55, 57 ), PoolIntArray( 57, 55, 58 ), PoolIntArray( 60, 59, 61 ), PoolIntArray( 61, 59, 62 ), PoolIntArray( 64, 63, 65 ), PoolIntArray( 65, 63, 67 ), PoolIntArray( 65, 67, 66 ), PoolIntArray( 71, 70, 68 ), PoolIntArray( 68, 70, 69 ), PoolIntArray( 75, 74, 72 ), PoolIntArray( 72, 74, 73 ), PoolIntArray( 77, 76, 78 ), PoolIntArray( 80, 79, 81 ), PoolIntArray( 81, 79, 82 ), PoolIntArray( 85, 84, 86 ), PoolIntArray( 86, 84, 83 ), PoolIntArray( 89, 88, 87 ), PoolIntArray( 91, 90, 92 ), PoolIntArray( 92, 90, 93 ), PoolIntArray( 96, 95, 94 ), PoolIntArray( 99, 98, 97 ), PoolIntArray( 102, 101, 100 ), PoolIntArray( 104, 103, 105 ), PoolIntArray( 105, 103, 106 ), PoolIntArray( 108, 107, 109 ), PoolIntArray( 109, 107, 110 ), PoolIntArray( 113, 112, 114 ), PoolIntArray( 114, 112, 111 ), PoolIntArray( 114, 111, 115 ), PoolIntArray( 117, 116, 118 ), PoolIntArray( 118, 116, 119 ), PoolIntArray( 119, 116, 120 ), PoolIntArray( 120, 116, 121 ), PoolIntArray( 124, 123, 122 ), PoolIntArray( 128, 127, 125 ), PoolIntArray( 125, 127, 126 ), PoolIntArray( 131, 130, 129 ), PoolIntArray( 135, 134, 132 ), PoolIntArray( 132, 134, 133 ), PoolIntArray( 137, 136, 138 ), PoolIntArray( 138, 136, 139 ), PoolIntArray( 142, 141, 140 ), PoolIntArray( 144, 143, 145 ), PoolIntArray( 145, 143, 146 ), PoolIntArray( 148, 147, 149 ), PoolIntArray( 149, 147, 150 ), PoolIntArray( 150, 147, 151 ), PoolIntArray( 151, 147, 152 ), PoolIntArray( 155, 154, 153 ), PoolIntArray( 157, 156, 158 ), PoolIntArray( 158, 156, 159 ), PoolIntArray( 161, 160, 162 ), PoolIntArray( 162, 160, 163 ), PoolIntArray( 167, 166, 164 ), PoolIntArray( 164, 166, 165 ), PoolIntArray( 169, 168, 170 ), PoolIntArray( 170, 168, 171 ), PoolIntArray( 173, 172, 174 ), PoolIntArray( 174, 172, 175 ) ]
 
 [node name="Level" type="Spatial"]
 
-[node name="BrickPillar" parent="." instance=ExtResource( 6 )]
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="Enemy" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.892, 1, 14.22 )
+
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
+navmesh = SubResource( 1 )
+
+[node name="BrickPillar" parent="NavigationMeshInstance" instance=ExtResource( 6 )]
 transform = Transform( -0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 9, 0, 6.5 )
 skeleton = NodePath("../Decorations/Rocks")
 
-[node name="Floors" type="Spatial" parent="."]
+[node name="Floors" type="Spatial" parent="NavigationMeshInstance"]
 
-[node name="StoneFloor" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
 
-[node name="StoneFloor2" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor2" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2 )
 
-[node name="StoneFloor3" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor3" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2 )
 
-[node name="StoneFloor4" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor4" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2 )
 
-[node name="StoneFloor5" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor5" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 2 )
 
-[node name="StoneFloor6" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor6" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 2 )
 
-[node name="StoneFloor7" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor7" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 2 )
 
-[node name="StoneFloor8" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor8" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 2 )
 
-[node name="StoneFloor9" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor9" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 2 )
 
-[node name="StoneFloor10" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor10" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
 
-[node name="StoneFloor11" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor11" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6 )
 
-[node name="StoneFloor12" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor12" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6 )
 
-[node name="StoneFloor13" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor13" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6 )
 
-[node name="StoneFloor14" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor14" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 6 )
 
-[node name="StoneFloor15" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor15" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 6 )
 
-[node name="StoneFloor16" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor16" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 6 )
 
-[node name="StoneFloor17" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor17" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 6 )
 
-[node name="StoneFloor18" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor18" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 6 )
 
-[node name="StoneFloor19" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor19" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
 
-[node name="StoneFloor20" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor20" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 10 )
 
-[node name="StoneFloor21" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor21" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10 )
 
-[node name="StoneFloor22" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor22" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10 )
 
-[node name="StoneFloor23" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor23" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 10 )
 
-[node name="StoneFloor24" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor24" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10 )
 
-[node name="StoneFloor25" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor25" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 10 )
 
-[node name="StoneFloor26" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor26" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 10 )
 
-[node name="StoneFloor27" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor27" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 10 )
 
-[node name="StoneFloor28" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor28" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14 )
 
-[node name="StoneFloor29" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor29" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 14 )
 
-[node name="StoneFloor30" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor30" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 14 )
 
-[node name="StoneFloor31" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor31" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 14 )
 
-[node name="StoneFloor32" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor32" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 14 )
 
-[node name="StoneFloor33" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor33" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14 )
 
-[node name="StoneFloor34" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor34" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 14 )
 
-[node name="StoneFloor35" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor35" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 14 )
 
-[node name="StoneFloor36" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor36" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 14 )
 
-[node name="StoneFloor37" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor37" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18 )
 
-[node name="StoneFloor38" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor38" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 18 )
 
-[node name="StoneFloor39" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor39" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 18 )
 
-[node name="StoneFloor40" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor40" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 18 )
 
-[node name="StoneFloor41" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor41" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 18 )
 
-[node name="StoneFloor42" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor42" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 18 )
 
-[node name="StoneFloor43" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor43" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 18 )
 
-[node name="StoneFloor44" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor44" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 18 )
 
-[node name="StoneFloor45" parent="Floors" instance=ExtResource( 3 )]
+[node name="StoneFloor45" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 18 )
 
-[node name="Decorations" type="Spatial" parent="."]
+[node name="Decorations" type="Spatial" parent="NavigationMeshInstance"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 6 )
 
-[node name="BonePile" parent="Decorations" instance=ExtResource( 9 )]
+[node name="BonePile" parent="NavigationMeshInstance/Decorations" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 5 )
 
-[node name="Rocks" parent="Decorations" instance=ExtResource( 4 )]
+[node name="Rocks" parent="NavigationMeshInstance/Decorations" instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 5.5, 0, 2 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="Fence" parent="Decorations" instance=ExtResource( 8 )]
+[node name="Fence" parent="NavigationMeshInstance/Decorations" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 0, 1 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="Fence2" parent="Decorations" instance=ExtResource( 8 )]
+[node name="Fence2" parent="NavigationMeshInstance/Decorations" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, 1 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="FenceEnd" parent="Decorations" instance=ExtResource( 10 )]
+[node name="FenceEnd" parent="NavigationMeshInstance/Decorations" instance=ExtResource( 10 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 1 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="StoneWall" parent="Decorations" instance=ExtResource( 11 )]
+[node name="StoneWall" parent="NavigationMeshInstance/Decorations" instance=ExtResource( 11 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0, 1 )
 
-[node name="Walls" type="Spatial" parent="."]
+[node name="Walls" type="Spatial" parent="NavigationMeshInstance"]
 
-[node name="WoodenWallFull" parent="Walls" instance=ExtResource( 2 )]
-skeleton = NodePath("../..")
+[node name="WoodenWallFull" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull2" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull2" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull3" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull3" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull4" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull4" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull6" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull6" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull7" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull7" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull8" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull8" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenWallFull9" parent="Walls" instance=ExtResource( 2 )]
+[node name="WoodenWallFull9" parent="NavigationMeshInstance/Walls" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, 0 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="WoodenDoor" parent="Walls" instance=ExtResource( 5 )]
+[node name="WoodenDoor" parent="NavigationMeshInstance/Walls" instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 0 )
 
-[node name="WoodenWallCornerInner" parent="Walls" instance=ExtResource( 7 )]
+[node name="WoodenWallCornerInner" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36, 0, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-
-[node name="Skull" parent="." instance=ExtResource( 12 )]
+[node name="Skull" parent="NavigationMeshInstance" instance=ExtResource( 12 )]
 transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 2.5, 0.5, 11 )
+skeleton = NodePath("../..")
