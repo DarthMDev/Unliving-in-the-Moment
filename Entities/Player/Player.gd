@@ -35,6 +35,8 @@ var livesToY = {
 	0: 66
 }
 func _ready():
+	print(get_tree().current_scene.counter)
+	get_tree().current_scene.add()
 	material.flags_transparent = true
 	CLOTH.material_override = material
 
@@ -47,7 +49,7 @@ func _process(delta):
 		# ANIMATION_PLAYER.play('Death')
 		# TODO add death sound effect
 		# reset the scene
-		get_tree().reload_current_scene()
+		get_tree().current_scene.reload()
 		# TODO add death screen
 
 	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing():
@@ -136,7 +138,6 @@ func checkLives():
 	else:
 		# Respawn and update lives GUI
 		pass
-		# get_tree().reload_current_scene()
 	livesSprite.region_rect  =  Rect2(0, livesToY[lives], 33, 11)
 
 func fall_damage():

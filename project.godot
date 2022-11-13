@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Unliving in the Moment"
-run/main_scene="res://Level/Graveyard.tscn"
+run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
 [display]
