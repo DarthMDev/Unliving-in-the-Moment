@@ -6,12 +6,9 @@ export(int) var MAX_SPEED = 10
 export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
 export(int) var GRAVITY = 1
-export (int) var HEALTH = 100
-export (int) var MAX_HEALTH = 100
 export(float) var alpha = 1.0
-export (int) var LIVES = 3
+export (int) var lives = 3
 export (int) var MAX_LIVES = 3
-
 onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
 onready var ANIMATION_PLAYER = $AnimationPlayer
@@ -22,7 +19,14 @@ var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
 var player = self
 var hidden_mouse = false
-
+onready var ui = $UserInterface
+onready var livesSprite = $"CanvasLayer/UserInterface/LivesCounter/Sprite"
+var livesToY = {
+	3: 0,
+	2: 22,
+	1: 44,
+	0: 66
+}
 func _ready():
 	material.flags_transparent = true
 	CLOTH.material_override = material
@@ -33,14 +37,14 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
 		ANIMATION_PLAYER.play("Ethereal")
-	if HEALTH == 0:
+	if lives == 0:
 		# TODO add death animation
 		# ANIMATION_PLAYER.play('Death')
 		# TODO add death sound effect
 		# reset the scene
 		get_tree().reload_current_scene()
 		# TODO add death screen
-		LIVES -= 1
+		
 	# if esc is pressed show the mouse again
 	if Input.is_action_just_pressed("ui_cancel") and hidden_mouse == true:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -83,27 +87,32 @@ func _physics_process(delta):
 	# if the player is below the ground respawn them back at their previous position
 	if player.translation.y < -50:
 		# reset the scene
-		get_tree().reload_current_scene()
+		# get_tree().reload_current_scene()
+		player.translation = Vector3(1, 1, 1)
+		# minus_lives(1)
 		# TODO reset the player position nearest to their last position on the ground
-		
 
-func change_health(amount):
-	health += amount
-	if health = clamp(health, 0, health_max):
-		health = 0
-		lives -= 1
-		checkLives()
-	else:
-		# Update health bar
-		
+
 func checkLives():
-	if lives = clamp(lives, 0, lives_max):
+	if lives == 0:
 		lives = 0
+		# TODO add death GUI animation
 		# Game over
+	elif lives > MAX_LIVES:
+		lives = MAX_LIVES
+
 	else:
 		# Respawn and update lives GUI
-		get_tree().reload_current_scene()
+		pass
+		# get_tree().reload_current_scene()
 
-func change_lives(amount):
-	lives += amount
+	livesSprite.region_rect  =  Rect2(0, livesToY[lives], 33, 11)
+
+func minus_lives(amount):
+	lives -= amount
 	checkLives()
+
+
+
+func get_lives():
+	return lives
