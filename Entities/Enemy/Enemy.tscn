@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Skeleton/skeleton_idle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entities/Skeleton/skeleton_equip_glonk.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Entities/Skeleton/skeleton_march.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Skeleton/skeleton_shoot.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 1.036, 1.036, 1.036 )
-
-[sub_resource type="CapsuleMesh" id=4]
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 2
@@ -17,8 +19,19 @@ shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-mesh = SubResource( 4 )
 skeleton = NodePath("")
+
+[node name="skeleton_equip_glonk" parent="MeshInstance" instance=ExtResource( 3 )]
+transform = Transform( -1.5, 1.31134e-07, -5.73206e-15, 0, -6.55671e-08, -1.5, -1.31134e-07, -1.5, 6.55671e-08, 0, 4.37114e-08, 1 )
+
+[node name="skeleton_march" parent="MeshInstance" instance=ExtResource( 4 )]
+transform = Transform( -1.5, 1.31134e-07, -5.73206e-15, 0, -6.55671e-08, -1.5, -1.31134e-07, -1.5, 6.55671e-08, 0, 4.37114e-08, 1 )
+
+[node name="skeleton_idle" parent="MeshInstance" instance=ExtResource( 2 )]
+transform = Transform( -1.5, 1.31134e-07, -5.73206e-15, 0, -6.55671e-08, -1.5, -1.31134e-07, -1.5, 6.55671e-08, 0, 4.37114e-08, 1 )
+
+[node name="skeleton_shoot" parent="MeshInstance" instance=ExtResource( 5 )]
+transform = Transform( -1.5, 1.31134e-07, -5.73206e-15, 0, -6.55671e-08, -1.5, -1.31134e-07, -1.5, 6.55671e-08, 0, 4.37114e-08, 1 )
 
 [node name="agent" type="NavigationAgent" parent="."]
 avoidance_enabled = true

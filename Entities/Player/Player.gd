@@ -55,7 +55,7 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("shoot"):
 		var rocket = ROCKET_SCENE.instance()
-		rocket.init($ClothRotation/RocketMesh.global_translation, $ClothRotation/RocketMesh.global_rotation)
+		rocket.init($ClothRotation/RocketLauncherMesh/RocketMesh.global_translation, $ClothRotation/RocketLauncherMesh/RocketMesh.global_rotation)
 		get_parent().add_child(rocket)
 	
 	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
