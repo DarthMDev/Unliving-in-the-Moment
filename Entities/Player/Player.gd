@@ -4,6 +4,7 @@ export(int) var MAX_SPEED = 10
 export(int) var ACCELERATION = 4
 export(int) var FRICTION = 10
 export(int) var GRAVITY = 1
+export (int) var HEALTH = 100
 
 export(float) var alpha = 1.0
 
@@ -26,7 +27,13 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
 		ANIMATION_PLAYER.play("Ethereal")
-	
+	if HEALTH == 0:
+		# TODO add death animation
+		# ANIMATION_PLAYER.play('Death')
+		# TODO add death sound effect
+		# reset the scene
+		get_tree().reload_current_scene()
+		# TODO add death screen
 	if Input.is_action_just_pressed("shoot"):
 		var rocket = ROCKET_SCENE.instance()
 		rocket.init($ClothRotation/RocketMesh.global_translation, $ClothRotation/RocketMesh.global_rotation)
