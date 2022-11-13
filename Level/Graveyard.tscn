@@ -3259,21 +3259,21 @@ skeleton = NodePath("../StoneWall5")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 39 )
 
 [node name="StoneWall" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 35 )
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0.874259, 0, 35 )
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall"]
 transform = Transform( -1.74846e-08, 0.0694593, -0.393923, -6.16922e-16, 0.393923, 0.0694593, 0.4, 3.03616e-09, -1.72189e-08, -1, 1, -4.37105e-08 )
 texture = ExtResource( 12 )
 
 [node name="StoneWall3" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( -0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -16, 0, 35 )
+transform = Transform( -0.75, 0, 1.29904, 0, 1.5, 0, -1.29904, 0, -0.75, -16, 0, 35 )
 
 [node name="Epitaph1" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall3"]
 transform = Transform( -1.49012e-08, 0.0694593, -0.984808, 0, 0.393923, 0.173648, 0.4, 3.72529e-09, -5.96046e-08, -1.11603, 1, -0.0669861 )
 texture = ExtResource( 8 )
 
 [node name="StoneWall8" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( 0.5, 0, 0.866025, -0.433013, 0.866025, 0.25, -0.75, -0.5, 0.433013, 16, -1, 22.5 )
+transform = Transform( 0.75, -2.23517e-08, 1.29904, -0.649519, 1.29904, 0.375, -1.125, -0.75, 0.649519, 16, -1, 22.5 )
 
 [node name="Epitaph2" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall8"]
 transform = Transform( -0.027681, 0.0407021, -0.992399, 0.000448234, 0.397916, 0.101922, 0.39904, 0.00237638, -0.0689563, -1.08791, 0.975823, -0.0646935 )
@@ -3287,28 +3287,28 @@ transform = Transform( -0.00902305, 0.0336744, -0.398478, 0.000380538, 0.39858, 
 texture = ExtResource( 15 )
 
 [node name="StoneWall10" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( -0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -16, 0, -45 )
+transform = Transform( -0.388228, 0, 1.44889, 0, 1.5, 0, -1.44889, 0, -0.388228, -16, 0, -45 )
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall10"]
 transform = Transform( 0.0333133, 0.068404, -0.392697, -0.0179774, 0.393923, 0.0670925, 0.398205, 0.0120615, 0.0358815, -1.13069, 1, 0.162905 )
 texture = ExtResource( 13 )
 
 [node name="StoneWall11" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 8.5 )
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 8.5 )
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall11"]
 transform = Transform( -1.74846e-08, 0.0348623, -0.398478, -3.09639e-16, 0.398478, 0.0348623, 0.4, 1.52388e-09, -1.7418e-08, -1, 0.965926, 0.258819 )
 texture = ExtResource( 11 )
 
 [node name="StoneWall12" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( 0.193523, -0.00851856, 0.981059, -0.243686, 0.968208, 0.0564765, -0.95035, -0.25, 0.185295, 8, -0.5, 9 )
+transform = Transform( 0.290285, -0.0127779, 1.47159, -0.365529, 1.45231, 0.0847146, -1.42553, -0.375, 0.277942, 8, -0.5, 9 )
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall12"]
 transform = Transform( -0.0331592, 0.0362514, -0.396972, -0.00168208, 0.398327, 0.0365157, 0.39862, 0.00469643, -0.0328679, -1.08138, 0.771619, -0.187712 )
 texture = ExtResource( 14 )
 
 [node name="StoneWall14" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
-transform = Transform( -0.591506, -0.224144, 0.774519, -0.524519, 0.836516, -0.158494, -0.612372, -0.5, -0.612372, -9, -1, 9 )
+transform = Transform( -0.88726, -0.336216, 1.16178, -0.786779, 1.25477, -0.23774, -0.918558, -0.75, -0.918559, -8.51115, -1, 8.56769 )
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall14"]
 transform = Transform( -0.00565517, 0.0487972, -0.396972, 0.00362556, 0.397, 0.0487496, 0.399944, -0.00290966, -0.00605462, -1.03252, 0.57703, 0.153124 )
@@ -3842,7 +3842,7 @@ shape = SubResource( 19 )
 [node name="Decorations" type="Spatial" parent="."]
 
 [node name="Skull" parent="Decorations" instance=ExtResource( 16 )]
-transform = Transform( 0.12941, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, 0.12941, -16.5, 3.5, -45 )
+transform = Transform( 0.12941, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, 0.12941, -16.5, 5.23502, -45 )
 
 [node name="BonePile" parent="Decorations" instance=ExtResource( 19 )]
 transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -20.5, 0, 29.5 )
@@ -3876,7 +3876,7 @@ transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107,
 skeleton = NodePath("../BonePile9")
 
 [node name="Rocks2" parent="Decorations" instance=ExtResource( 17 )]
-transform = Transform( -0.5, -0.707107, 0.5, -0.5, 0.707107, 0.5, -0.707107, 0, -0.707107, -2.5, 0, 34 )
+transform = Transform( -0.75, -1.06066, 0.75, -0.75, 1.06066, 0.75, -1.06066, 4.47035e-08, -1.06066, -2.5, 0, 34 )
 skeleton = NodePath("../BonePile9")
 
 [node name="Rocks3" parent="Decorations" instance=ExtResource( 17 )]
