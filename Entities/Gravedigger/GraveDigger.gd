@@ -216,8 +216,8 @@ func damage(amount):
 		$Particles4.emitting = true
 		$Particles5.emitting = true
 		$MeshInstance.visible = false
-		player.winCondition = true
 		
 
 func _on_DeathTimer_timeout():
+	player.winCondition = true
 	queue_free()
