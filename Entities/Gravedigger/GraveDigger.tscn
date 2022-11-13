@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Entities/Gravedigger/GraveDigger.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Gravedigger/Animations/gravedigger_idle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entities/Gravedigger/Animations/ gravedigger_smash.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Entities/Gravedigger/Animations/gravedigger_swipe.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Gravedigger/Animations/gravedigger_walk.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entities/Gravedigger/Animations/gravedigger_dig.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Entities/Gravedigger/speech.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Entities/Gravedigger/Animations/shockwave.tscn" type="PackedScene" id=8]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1.036, 1.12512, 1.036 )
+
+[node name="Gravedigger" type="KinematicBody"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 3.01959, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+skeleton = NodePath("")
+
+[node name="gravedigger_smash" parent="MeshInstance" instance=ExtResource( 3 )]
+transform = Transform( -2.18557e-08, 5.32907e-15, 0.5, -0.5, -2.18557e-08, -2.18557e-08, 2.18557e-08, -0.5, 6.28441e-15, 0, 0, 0 )
+
+[node name="gravedigger_dig" parent="MeshInstance" instance=ExtResource( 6 )]
+transform = Transform( -2.18557e-08, 5.32907e-15, 0.5, -0.5, -2.18557e-08, -2.18557e-08, 2.18557e-08, -0.5, 6.28441e-15, 0, 0, 0 )
+
+[node name="gravedigger_idle" parent="MeshInstance" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 5.32907e-15, 0.5, -0.5, -2.18557e-08, -2.18557e-08, 2.18557e-08, -0.5, 6.28441e-15, 0, 0, 0 )
+
+[node name="gravedigger_swipe" parent="MeshInstance" instance=ExtResource( 4 )]
+transform = Transform( -2.18557e-08, 5.32907e-15, 0.5, -0.5, -2.18557e-08, -2.18557e-08, 2.18557e-08, -0.5, 6.28441e-15, 0, 0, 0 )
+
+[node name="gravedigger_walk" parent="MeshInstance" instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-08, 5.32907e-15, 0.5, -0.5, -2.18557e-08, -2.18557e-08, 2.18557e-08, -0.5, 6.28441e-15, 0, 0, 0 )
+
+[node name="shockwave" parent="MeshInstance" instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 0, -4.37114e-08, -1 )
+
+[node name="agent" type="NavigationAgent" parent="."]
+avoidance_enabled = true
+radius = 2.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[connection signal="velocity_computed" from="agent" to="." method="_on_agent_velocity_computed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Entities/Gravedigger/Animations/DamagePlayerOnHit.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Gravedigger/shockwave.glb" type="PackedScene" id=2]
+[ext_resource path="res://Entities/Gravedigger/Red.tres" type="Material" id=3]
+
+[sub_resource type="CylinderShape" id=1]
+
+[node name="shockwave" instance=ExtResource( 2 )]
+
+[node name="NurbsCircle" parent="Armature/Skeleton" index="0"]
+material/0 = ExtResource( 3 )
+
+[node name="BoneAttachment" type="BoneAttachment" parent="Armature/Skeleton" index="1"]
+transform = Transform( 0.994904, 0, 0, 0, 0.520385, 0, 0, 0, 0.994904, 0, -0.494904, 0 )
+bone_name = "Bone"
+
+[node name="Area" type="Area" parent="Armature/Skeleton/BoneAttachment" index="0"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/BoneAttachment/Area" index="0"]
+transform = Transform( 3, 0, 0, 0, 0.4, 0, 0, 0, 2.754, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Armature/Skeleton/BoneAttachment/Area" to="Armature/Skeleton/BoneAttachment/Area" method="_on_Area_body_entered"]

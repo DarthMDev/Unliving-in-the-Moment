@@ -53,8 +53,9 @@ func on_body_entered(body):
 func shoot_projectile():
 	#TODO: make it shoot
 	pass
-
+			
 func do_animations(delta):
+	
 	
 	ANIM_IDLE.get_parent().visible = false
 	ANIM_EQUIP.get_parent().visible = false
