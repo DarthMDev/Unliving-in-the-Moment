@@ -8,11 +8,14 @@ var zlocation = rand_range(-360, 360)
 var harass = false
 # player escape event
 var player_escape = false
+export (NodePath)  var AREAPATH
+onready var area = get_node(AREAPATH)
 # face the direction of the player
 onready var target = get_parent().get_node("Player")
 var rot_speed = 0.05
 # map navigation
 onready var agent: NavigationAgent = $agent
+
 
 onready var target_location: Node = $"../Player"
 var speed = 5
@@ -21,7 +24,12 @@ var idle_speed = rand_range(minimum_speed, speed)
 var move_or_not = [true, false]
 var start_move = move_or_not[randi() % move_or_not.size()]
 
-func _on_Area_body_entered(body):
+func _ready():
+	# 
+	area.connect("body_entered", self, "on_body_entered")
+	area.connect("body_exited", self, "on_body_exited")
+
+func on_body_entered(body):
 	if body.name ==  'Player':
 		if body.alpha >= 1.0:
 			rot_speed = 0.1
@@ -68,7 +76,7 @@ func _process(delta):
 		if not is_on_floor():
 			move_and_collide(-global_transform.basis.y.normalized() * gravity * delta)
 				
-func _on_Area_body_exited(body):
+func on_body_exited(body):
 	if body.name == ('Player'):
 		rot_speed = 0.05
 		harass = false
