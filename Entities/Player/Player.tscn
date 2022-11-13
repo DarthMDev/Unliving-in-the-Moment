@@ -193,7 +193,7 @@ tracks/5/keys = {
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
-collision_layer = 0
+collision_layer = 512
 collision_mask = 3
 script = ExtResource( 1 )
 
@@ -323,7 +323,7 @@ attachments/34/spatial_attachment_path = NodePath("..")
 attachments/34/offset = Vector3( 0.750367, 1.19761, -0.535866 )
 
 [node name="RocketLauncherMesh" type="MeshInstance" parent="ClothRotation"]
-transform = Transform( -4.515e-08, -3.85493e-10, 0.999999, -0.258819, 0.965926, -1.13133e-08, -0.965925, -0.258819, -4.37113e-08, -2.20189, -0.5, 1 )
+transform = Transform( -4.515e-08, -3.85487e-10, 0.999999, -0.258819, 0.965926, -1.13133e-08, -0.965925, -0.258819, -4.37113e-08, -2.20189, -0.5, 1 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
 

@@ -113,7 +113,6 @@ shoot={
 
 3d_physics/layer_1="wall"
 3d_physics/layer_2="permeable_wall"
-3d_physics/layer_9="enemy"
 3d_physics/layer_10="player"
 
 [physics]

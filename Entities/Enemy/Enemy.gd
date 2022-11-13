@@ -4,7 +4,6 @@ class_name Enemy
 # gravity
 var gravity = 15
 
-
 var xlocation = rand_range(-360, 360)
 var zlocation = rand_range(-360, 360)
 # following player
@@ -67,9 +66,9 @@ func do_animations(delta):
 	ANIM_SHOOT.get_parent().visible = false
 	
 	var distance = global_translation.distance_to(target.global_translation)
-	chasing = distance > 24 && target.alpha == 1.0 || chase_timer > 0
+	chasing = distance > 20 && target.alpha == 1.0 || chase_timer > 0
 	
-	var attacking = distance <= 24 && target.alpha == 1.0 && chase_timer <= 0
+	var attacking = distance <= 20 && target.alpha == 1.0 && chase_timer <= 0
 	
 	var spaceState = get_world().direct_space_state
 	

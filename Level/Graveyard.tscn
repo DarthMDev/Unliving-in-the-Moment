@@ -6572,6 +6572,6 @@ transform = Transform( 0.836516, 0.258819, -0.482963, -0.0870968, 0.933013, 0.34
 texture = ExtResource( 26 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, -33.5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 4.5, -107.5 )
 
 [connection signal="body_entered" from="Areas/BossLoadArea" to="Areas/BossLoadArea" method="_on_BossLoadArea_body_entered"]
