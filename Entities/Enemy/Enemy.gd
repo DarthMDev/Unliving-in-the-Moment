@@ -58,6 +58,7 @@ func shoot_projectile():
 	var bullet = BULLET_SCENE.instance()
 	bullet.init(global_translation + Vector3(0, 1, 0), global_rotation)
 	get_parent().add_child(bullet)
+	$GunShotAudio.play()
 
 func do_animations(delta):
 	ANIM_IDLE.get_parent().visible = false
