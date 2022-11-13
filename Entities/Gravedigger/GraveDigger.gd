@@ -17,7 +17,7 @@ onready var ANIM_WALK = $MeshInstance/gravedigger_walk/AnimationPlayer
 onready var ANIM_SMASH = $MeshInstance/gravedigger_smash/AnimationPlayer
 onready var SHOCKWAVE = $MeshInstance/shockwave/AnimationPlayer
 
-export(int) var health = 10
+export(int) var health = 15
 
 var chase_timer = 0.0
 
