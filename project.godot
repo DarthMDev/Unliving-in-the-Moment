@@ -27,13 +27,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Unliving in the Moment"
-run/main_scene="res://Level/Level.tscn"
+run/main_scene="res://Level/Graveyard.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=384
-window/size/height=216
+window/size/width=320
+window/size/height=180
 window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="viewport"

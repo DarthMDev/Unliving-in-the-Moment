@@ -41,8 +41,8 @@ var move_or_not = [true, false]
 var start_move = move_or_not[randi() % move_or_not.size()]
 
 var chasing = true
-export var MAX_HEALTH = 100
-export var health = 100
+export var MAX_HEALTH = 3
+export var health = 3
 func _ready():
 	# 
 	area.connect("body_entered", self, "on_body_entered")
@@ -199,6 +199,7 @@ func _on_Timer_timeout():
 	# Enemy will move or look around
 	start_move = move_or_not[randi() % move_or_not.size()]
 	$Timer.start()
+	AnimationPlayer
 
 func _on_agent_velocity_computed(safe_velocity):
 	move_and_collide(safe_velocity)
