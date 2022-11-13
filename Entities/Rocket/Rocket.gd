@@ -12,7 +12,9 @@ func init(start_translation: Vector3, start_rotation: Vector3):
 
 func _physics_process(delta):
 	# If collide with something
-	if move_and_collide(global_transform.basis.z.rotated(Vector3(0, 1, 0), deg2rad(-90)) * SPEED * delta, true, false):
+	var collision = move_and_collide(global_transform.basis.z.rotated(Vector3(0, 1, 0), deg2rad(-90)) * SPEED * delta, true, false)
+	if collision:
+		
 		axis_lock_motion_x = true
 		axis_lock_motion_z = true
 		$MeshInstance.visible = false

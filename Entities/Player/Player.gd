@@ -16,6 +16,8 @@ onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
 onready var ANIMATION_PLAYER = $AnimationPlayer
 
+onready var ROCKET_LAUNCHER_MESH = $ClothRotation/RocketLauncherMesh
+
 onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
 
 var material = SpatialMaterial.new()
@@ -51,7 +53,7 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("shoot"):
 		var rocket = ROCKET_SCENE.instance()
-		rocket.init($ClothRotation/RocketMesh.global_translation, $ClothRotation/RocketMesh.global_rotation)
+		rocket.init($ClothRotation/RocketLauncherMesh/RocketMesh.global_translation, $ClothRotation/RocketLauncherMesh/RocketMesh.global_rotation)
 		get_parent().add_child(rocket)
 	
 	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
@@ -76,10 +78,15 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4, deg2rad(45))
 	
-	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
+	var mousePos = getMousePosition3D()
+	var mouseDelta = mousePos - translation
 	
-	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
-
+	var angle = atan2(mouseDelta.x, mouseDelta.z);
+	
+	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, angle, delta * 3)
+	
+	ROCKET_LAUNCHER_MESH.rotation.y = angle - CLOTH_ROTATION.rotation.y + deg2rad(90)
+	
 	# if the player is below the ground respawn them back at their previous position
 	if player.translation.y < -50:
 		# reset the scene
@@ -87,23 +94,38 @@ func _physics_process(delta):
 		# TODO reset the player position nearest to their last position on the ground
 		
 
+func getMousePosition3D():
+	
+	var spaceState = get_world().direct_space_state
+	
+	var mousePos = get_viewport().get_mouse_position()
+	var camera = get_tree().root.get_camera()
+	var rayOrigin = camera.project_ray_origin(mousePos)
+	var rayEnd = rayOrigin + camera.project_ray_normal(mousePos) * 2000
+	var rayArray = spaceState.intersect_ray(rayOrigin, rayEnd)
+	
+	if rayArray.has("position"):
+		return rayArray["position"]
+	return Vector3()
+
 func change_health(amount):
-	health += amount
-	if health = clamp(health, 0, health_max):
-		health = 0
-		lives -= 1
+	HEALTH += amount
+	if HEALTH == clamp(HEALTH, 0, MAX_HEALTH):
+		HEALTH = 0
+		LIVES -= 1
 		checkLives()
 	else:
 		# Update health bar
+		pass
 		
 func checkLives():
-	if lives = clamp(lives, 0, lives_max):
-		lives = 0
+	if LIVES == clamp(LIVES, 0, MAX_LIVES):
+		LIVES = 0
 		# Game over
 	else:
 		# Respawn and update lives GUI
 		get_tree().reload_current_scene()
 
 func change_lives(amount):
-	lives += amount
+	LIVES += amount
 	checkLives()

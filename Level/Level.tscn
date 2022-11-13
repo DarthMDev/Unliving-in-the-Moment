@@ -155,6 +155,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 14 )
 [node name="StoneFloor37" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18 )
 
+[node name="StoneFloor46" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
+transform = Transform( 1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -20, 18 )
+visible = false
+
 [node name="StoneFloor38" parent="NavigationMeshInstance/Floors" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 18 )
 
