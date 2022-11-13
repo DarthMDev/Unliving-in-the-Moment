@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Entities/Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Skeleton/skeleton_idle.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Entities/Skeleton/skeleton_march.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/Skeleton/skeleton_shoot.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Skeleton/Material_006.material" type="Material" id=6]
+[ext_resource path="res://Sounds/hurt.wav" type="AudioStream" id=7]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -72,6 +73,10 @@ draw_pass_1 = SubResource( 6 )
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="HurtAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 7 )
+unit_db = 15.0
 
 [connection signal="velocity_computed" from="agent" to="." method="_on_agent_velocity_computed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

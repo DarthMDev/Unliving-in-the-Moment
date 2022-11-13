@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Entities/Gravedigger/GraveDigger.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Gravedigger/Animations/gravedigger_idle.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Entities/Gravedigger/Animations/gravedigger_dig.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Entities/Gravedigger/speech.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Entities/Gravedigger/Animations/shockwave.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sounds/hurt.wav" type="AudioStream" id=9]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 1.036, 1.12512, 1.036 )
@@ -145,5 +146,9 @@ one_shot = true
 randomness = 1.0
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 13 )
+
+[node name="HurtAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 9 )
+unit_db = 25.0
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

@@ -150,8 +150,8 @@ func do_animations(delta):
 				shockwave_time = 1
 				shockwave_pos = global_translation + Vector3.UP
 				SHOCKWAVE.stop();
-				SHOCKWAVE.seek(0, true);
 				SHOCKWAVE.play();
+				SHOCKWAVE.seek(0, true);
 	elif state == STATE_DIG:
 		ANIM_DIG.get_parent().visible = true
 		if !ANIM_DIG.is_playing():
@@ -206,6 +206,7 @@ func _process(delta):
 
 func damage(amount):
 	health -= amount
+	$HurtAudio.play()
 	if health <= 0:
 		$DeathTimer.start()
 		$Particles.emitting = true

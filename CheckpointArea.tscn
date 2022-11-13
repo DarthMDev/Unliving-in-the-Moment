@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CheckpointArea.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=24]
+
+[node name="CheckpointArea" type="Area"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 24 )
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_CheckpointArea_body_entered"]

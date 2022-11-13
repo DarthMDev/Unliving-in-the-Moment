@@ -10,3 +10,4 @@ data_*/
 
 # Other ignores
 .DS_Store
+Distribution/
