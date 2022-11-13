@@ -94,6 +94,7 @@ shoot={
 2d_physics/layer_2="permeable wall"
 3d_physics/layer_2="permeable_wall"
 2d_physics/layer_3="item"
+3d_physics/layer_3="Level"
 2d_physics/layer_4="enemy"
 
 [physics]
