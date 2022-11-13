@@ -26,6 +26,8 @@ var equipped = false
 var equipping = false
 var fire_timer = 3
 var chase_timer = 0.0
+var clip = 5
+var max_clip = 5
 var shots = 0
 
 onready var target_location: Node = $"../Player"
@@ -60,9 +62,9 @@ func do_animations(delta):
 	ANIM_SHOOT.get_parent().visible = false
 	
 	var distance = global_translation.distance_to(target.global_translation)
-	chasing = distance > 16 && target.alpha == 1.0 || chase_timer > 0
+	chasing = distance > 24 && target.alpha == 1.0 || chase_timer > 0
 	
-	var attacking = distance <= 16 && target.alpha == 1.0 && chase_timer <= 0
+	var attacking = distance <= 24 && target.alpha == 1.0 && chase_timer <= 0
 	
 	var spaceState = get_world().direct_space_state
 	
@@ -78,6 +80,7 @@ func do_animations(delta):
 			
 			#.seek(0, true)
 			if !equipping:
+				clip = max_clip
 				equipping = true
 				#$MeshInstance/skeleton_equip_glonk/AnimationPlayer
 				ANIM_EQUIP.stop()
@@ -91,7 +94,10 @@ func do_animations(delta):
 			if fire_timer > 0:
 				fire_timer -= delta
 				if fire_timer <= 0:
-					if rand_range(0, 10) <= 1:
+					if clip <= 0:
+						equipped = false
+						equipping = false
+					elif rand_range(0, 10) <= 1 && distance > 8:
 						chase_timer = rand_range(2, 4)
 					else:
 						if rand_range(0, 10) < 3:
@@ -108,6 +114,7 @@ func do_animations(delta):
 					shots = shots - 1
 				else:
 					fire_timer = 3
+				clip = clip - 1
 				
 	
 	elif !chasing:
