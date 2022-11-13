@@ -330,7 +330,6 @@ skeleton = NodePath("../..")
 
 [node name="RocketMesh" type="MeshInstance" parent="ClothRotation/RocketLauncherMesh"]
 transform = Transform( 1, 0, 0, 0, 1, -8.88178e-16, 0, 0, 1, 0, 0, 0 )
-visible = false
 mesh = ExtResource( 4 )
 skeleton = NodePath("../..")
 
