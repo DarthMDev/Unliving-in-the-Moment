@@ -88,8 +88,8 @@ func do_animations(delta):
 				equipping = true
 				#$MeshInstance/skeleton_equip_glonk/AnimationPlayer
 				ANIM_EQUIP.stop()
-				ANIM_EQUIP.seek(0, true)
 				ANIM_EQUIP.play("Animation")
+				ANIM_EQUIP.seek(0, true)
 			elif !ANIM_EQUIP.is_playing():
 				equipped = true
 		else:
@@ -111,8 +111,8 @@ func do_animations(delta):
 			else:
 				shoot_projectile()
 				ANIM_SHOOT.stop()
-				ANIM_SHOOT.seek(0, true)
 				ANIM_SHOOT.play("Animation")
+				ANIM_SHOOT.seek(0, true)
 				if shots > 0:
 					fire_timer = 0.5
 					shots = shots - 1
