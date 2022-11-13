@@ -14,6 +14,7 @@ func _physics_process(delta):
 	# If collide with something
 	var collision = move_and_collide(global_transform.basis.z.rotated(Vector3(0, 1, 0), deg2rad(-90)) * SPEED * delta, true, false)
 	if collision:
+		$ExplosionAudio.play()
 		axis_lock_motion_x = true
 		axis_lock_motion_z = true
 		$MeshInstance.visible = false

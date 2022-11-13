@@ -35,15 +35,15 @@ var livesToY = {
 	0: 66
 }
 func _ready():
-	print(get_tree().current_scene.counter)
-	get_tree().current_scene.add()
+	global_translation = get_tree().current_scene.checkpoint
 	material.flags_transparent = true
 	CLOTH.material_override = material
 
 	# hide the cursor
 func _process(delta):
-	if Input.is_action_just_pressed("ethereal"):
+	if Input.is_action_just_pressed("ethereal") and not ETHEREAL_PLAYER.is_playing():
 		ETHEREAL_PLAYER.play("Ethereal")
+		$EtherealAudio.play()
 	if lives == 0:
 		# TODO add death animation
 		# ANIMATION_PLAYER.play('Death')
@@ -52,7 +52,8 @@ func _process(delta):
 		get_tree().current_scene.reload()
 		# TODO add death screen
 
-	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing():
+	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing() and alpha >= 1.0:
+		$RocketLaunchAudio.play()
 		var rocket = ROCKET_SCENE.instance()
 		rocket.init($ClothRotation/RocketLauncherMesh/RocketMesh.global_translation, $ClothRotation/RocketLauncherMesh/RocketMesh.global_rotation)
 		ROCKET_LAUNCHER_PLAYER.play("Launch")
@@ -82,6 +83,15 @@ func _physics_process(delta):
 	velocity.y += -GRAVITY
 	
 	if knockback_timer <= 0:
+		if global_translation.y >= 0:
+			lastOnGroundPos = Vector3(player.global_translation.x, player.global_translation.y, player.global_translation.z)
+			lastOnGroundVel = Vector3(velocity.x, 0, velocity.z)
+		# if the player is below the ground respawn them back at their previous position
+		elif player.global_translation.y < -10:
+			player.global_translation = lastOnGroundPos
+			velocity = -lastOnGroundVel * 10
+			fall_damage()
+		
 		velocity = lerp(velocity, move_and_slide(velocity * (2.0 if alpha < 1 else 1.0), Vector3.UP, true, 4, deg2rad(45)), delta * 5)
 	else:
 		knockback_timer-= delta
@@ -95,24 +105,6 @@ func _physics_process(delta):
 	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, angle, delta * 3)
 
 	ROCKET_LAUNCHER_MESH.rotation.y = angle - CLOTH_ROTATION.rotation.y + deg2rad(90)
-	
-	if velocity.y >= 0:
-		lastOnGroundPos = Vector3(player.translation.x, player.global_translation.y, player.global_translation.z)
-		lastOnGroundVel = Vector3(velocity.x, velocity.y, velocity.z)
-	# if the player is below the ground respawn them back at their previous position
-	elif player.global_translation.y < -10:
-		# reset the scene
-		# get_tree().reload_current_scene()
-
-		player.global_translation = lastOnGroundPos
-		velocity = -lastOnGroundVel * 3
-		
-		fall_damage()
-		# minus_lives(1)
-	
-		player.translation = Vector3(1, 1, 1)
-
-		# TODO reset the player position nearest to their last position on the ground
 	
 func getMousePosition3D():
 
@@ -135,9 +127,7 @@ func checkLives():
 		# Game over
 	elif lives > MAX_LIVES:
 		lives = MAX_LIVES
-	else:
-		# Respawn and update lives GUI
-		pass
+	$HurtAudio.play()
 	livesSprite.region_rect  =  Rect2(0, livesToY[lives], 33, 11)
 
 func fall_damage():

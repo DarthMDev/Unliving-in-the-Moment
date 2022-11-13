@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Weapons/Rocket Launcher/rocket.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Entities/Rocket/Rocket.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/explosion.wav" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 7.0
@@ -115,5 +116,9 @@ draw_pass_1 = SubResource( 12 )
 
 [node name="ParticleTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="ExplosionAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+unit_db = 15.0
 
 [connection signal="timeout" from="ParticleTimer" to="." method="_on_ParticleTimer_timeout"]

@@ -205,6 +205,7 @@ func _on_Timer2_timeout():
 							
 func damage(dmg):
 	health -= dmg
+	$HurtAudio.play()
 	if health <= 0:
 		$DeathTimer.start()
 		$Particles.emitting = true

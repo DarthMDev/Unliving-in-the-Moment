@@ -2,10 +2,10 @@ extends Spatial
 
 onready var GRAVEYARD_SCENE = load("res://Level/Graveyard.tscn")
 
-var counter = 0
+var checkpoint := Vector3(0, 0, 40)
 
-func add():
-	counter += 1
+func _ready():
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 0)
 
 func reload():
 	get_child(0).queue_free()
