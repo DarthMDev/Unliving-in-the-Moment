@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/cloth.obj" type="ArrayMesh" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sounds/hurt.wav" type="AudioStream" id=6]
 [ext_resource path="res://Sounds/launch.wav" type="AudioStream" id=7]
 [ext_resource path="res://Sounds/jump.wav" type="AudioStream" id=8]
+[ext_resource path="res://WinInterface.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SphereShape" id=3]
 
@@ -362,3 +363,7 @@ unit_db = 15.0
 [node name="EtherealAudio" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 8 )
 unit_db = 15.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" parent="CanvasLayer2" instance=ExtResource( 9 )]

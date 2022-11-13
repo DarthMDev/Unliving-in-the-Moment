@@ -5,7 +5,7 @@ var gravity = 15
 
 var xlocation = rand_range(-360, 360)
 var zlocation = rand_range(-360, 360)
-
+onready var player = $"../Player"
 # face the direction of the player
 onready var target = get_parent().get_node("Player")
 var rot_speed = 0.05
@@ -215,6 +215,8 @@ func damage(amount):
 		$Particles4.emitting = true
 		$Particles5.emitting = true
 		$MeshInstance.visible = false
+		player.winCondition = true
+		
 
 func _on_DeathTimer_timeout():
 	queue_free()

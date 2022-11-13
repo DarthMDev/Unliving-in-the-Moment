@@ -12,11 +12,12 @@ onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
 onready var ETHEREAL_PLAYER = $EtherealPlayer
 onready var ROCKET_LAUNCHER_PLAYER = $RocketLauncherPlayer
-
 onready var ROCKET_LAUNCHER_MESH = $ClothRotation/RocketLauncherMesh
 
 onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
-
+onready var win_screen_layer = $"CanvasLayer2"
+onready var win_screen = $"CanvasLayer2/UserInterface"
+onready var livesSprite = $"CanvasLayer/UserInterface/LivesCounter/Sprite"
 var lastOnGroundPos = Vector3.ZERO
 var lastOnGroundVel = Vector3.ZERO
 var material = SpatialMaterial.new()
@@ -24,10 +25,11 @@ var velocity = Vector3.ZERO
 var player = self
 var hidden_mouse = false
 var iframes = 0
+var winCondition = false
+
 
 var knockback_timer = 0
 
-onready var livesSprite = $"CanvasLayer/UserInterface/LivesCounter/Sprite"
 var livesToY = {
 	3: 0,
 	2: 22,
@@ -38,7 +40,7 @@ func _ready():
 	global_translation = get_tree().current_scene.checkpoint
 	material.flags_transparent = true
 	CLOTH.material_override = material
-
+	win_screen_layer.visible = false
 	# hide the cursor
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal") and not ETHEREAL_PLAYER.is_playing():
@@ -51,6 +53,10 @@ func _process(delta):
 		# reset the scene
 		get_tree().current_scene.reload()
 		# TODO add death screen
+	if winCondition:
+		# reset the scene
+		win_screen_layer.visible = true
+
 
 	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing() and alpha >= 1.0:
 		$RocketLaunchAudio.play()
@@ -142,3 +148,4 @@ func damage(amount):
 
 func get_lives():
 	return lives
+
