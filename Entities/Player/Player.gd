@@ -87,3 +87,23 @@ func _physics_process(delta):
 		# TODO reset the player position nearest to their last position on the ground
 		
 
+func change_health(amount):
+	health += amount
+	if health = clamp(health, 0, health_max):
+		health = 0
+		lives -= 1
+		checkLives()
+	else:
+		# Update health bar
+		
+func checkLives():
+	if lives = clamp(lives, 0, lives_max):
+		lives = 0
+		# Game over
+	else:
+		# Respawn and update lives GUI
+		get_tree().reload_current_scene()
+
+func change_lives(amount):
+	lives += amount
+	checkLives()
