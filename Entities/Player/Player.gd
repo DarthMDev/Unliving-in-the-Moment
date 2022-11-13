@@ -11,6 +11,8 @@ onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
 onready var ANIMATION_PLAYER = $AnimationPlayer
 
+onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
+
 var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
 
@@ -23,6 +25,11 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
 		ANIMATION_PLAYER.play("Ethereal")
+	
+	if Input.is_action_just_pressed("shoot"):
+		var rocket = ROCKET_SCENE.instance()
+		rocket.init($ClothRotation/RocketMesh.global_translation, $ClothRotation/RocketMesh.global_rotation)
+		get_parent().add_child(rocket)
 	
 	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
 

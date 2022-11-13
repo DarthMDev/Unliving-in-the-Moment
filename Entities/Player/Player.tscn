@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/cloth.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Weapons/Rocket Launcher/rocket_launcher.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Weapons/Rocket Launcher/rocket.obj" type="ArrayMesh" id=4]
 
 [sub_resource type="SphereShape" id=3]
 
@@ -68,6 +70,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85825, 0 )
 mesh = ExtResource( 2 )
 skeleton = NodePath("")
 material/0 = SubResource( 5 )
+collision_layer = 0
+collision_mask = 3
 simulation_precision = 50
 linear_stiffness = 0.75
 areaAngular_stiffness = 1.0
@@ -178,6 +182,15 @@ attachments/33/offset = Vector3( 0.565079, 1.27752, -0.548567 )
 attachments/34/point_index = 560
 attachments/34/spatial_attachment_path = NodePath("..")
 attachments/34/offset = Vector3( 0.750367, 1.19761, -0.535866 )
+
+[node name="RocketLauncherMesh" type="MeshInstance" parent="ClothRotation"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, -0.5, 0.5 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+
+[node name="RocketMesh" type="MeshInstance" parent="ClothRotation"]
+transform = Transform( -2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, -2, -0.5, 0.5 )
+mesh = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 15.8707, 9.09111 )
