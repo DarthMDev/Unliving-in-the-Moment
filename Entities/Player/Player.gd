@@ -15,6 +15,7 @@ onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
 
 var material = SpatialMaterial.new()
 var velocity = Vector3.ZERO
+var player = self
 
 
 func _ready():
@@ -56,3 +57,11 @@ func _physics_process(delta):
 	var mousePos = get_viewport().get_mouse_position() - Vector2(get_viewport().size.x * 0.55, get_viewport().size.y * 0.5)
 	
 	CLOTH_ROTATION.rotation.y = lerp_angle(CLOTH_ROTATION.rotation.y, atan2(mousePos.x, mousePos.y), delta * 3)
+
+	# if the player is below the ground respawn them back at their previous position
+	if player.translation.y < -50:
+		# reset the scene
+		get_tree().reload_current_scene()
+		# TODO reset the player position nearest to their last position on the ground
+		
+
