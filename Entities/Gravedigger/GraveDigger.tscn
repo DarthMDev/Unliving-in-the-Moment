@@ -94,7 +94,7 @@ transform = Transform( 2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 0, -4.3
 stream = ExtResource( 7 )
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 one_shot = true
 
 [node name="Particles" type="Particles" parent="."]
