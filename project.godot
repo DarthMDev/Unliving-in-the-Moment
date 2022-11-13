@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://Entities/Enemy/Enemy.gd"
 }, {
 "base": "KinematicBody",
+"class": "GraveDigger",
+"language": "GDScript",
+"path": "res://Entities/Gravedigger/GraveDigger.gd"
+}, {
+"base": "KinematicBody",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Entities/Player/Player.gd"
 } ]
 _global_script_class_icons={
 "Enemy": "",
+"GraveDigger": "",
 "Player": ""
 }
 
@@ -105,13 +111,10 @@ shoot={
 
 [layer_names]
 
-2d_physics/layer_1="wall"
 3d_physics/layer_1="wall"
-2d_physics/layer_2="permeable wall"
 3d_physics/layer_2="permeable_wall"
-2d_physics/layer_3="item"
-3d_physics/layer_3="Level"
-2d_physics/layer_4="enemy"
+3d_physics/layer_9="enemy"
+3d_physics/layer_10="player"
 
 [physics]
 

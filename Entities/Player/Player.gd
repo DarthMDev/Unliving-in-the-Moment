@@ -27,7 +27,6 @@ var iframes = 0
 
 var knockback_timer = 0
 
-onready var ui = $UserInterface
 onready var livesSprite = $"CanvasLayer/UserInterface/LivesCounter/Sprite"
 var livesToY = {
 	3: 0,

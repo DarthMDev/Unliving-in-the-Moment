@@ -1,3 +1,4 @@
+class_name GraveDigger
 extends KinematicBody
 # gravity
 var gravity = 15
@@ -5,13 +6,9 @@ var gravity = 15
 var xlocation = rand_range(-360, 360)
 var zlocation = rand_range(-360, 360)
 
-export (NodePath)  var AREAPATH
-onready var area = get_node(AREAPATH)
 # face the direction of the player
 onready var target = get_parent().get_node("Player")
 var rot_speed = 0.05
-# map navigation
-onready var agent: NavigationAgent = $agent
 
 onready var ANIM_IDLE = $MeshInstance/gravedigger_idle/AnimationPlayer
 onready var ANIM_DIG = $MeshInstance/gravedigger_dig/AnimationPlayer
@@ -20,6 +17,7 @@ onready var ANIM_WALK = $MeshInstance/gravedigger_walk/AnimationPlayer
 onready var ANIM_SMASH = $MeshInstance/gravedigger_smash/AnimationPlayer
 onready var SHOCKWAVE = $MeshInstance/shockwave/AnimationPlayer
 
+export(int) var health = 10
 
 var chase_timer = 0.0
 
@@ -60,8 +58,6 @@ func do_animations(delta):
 		SHOCKWAVE.get_parent().scale = Vector3.ONE * ((1.0 - shockwave_time) * 3 + 1.0)
 	else:
 		SHOCKWAVE.get_parent().visible = false
-		
-		
 	
 	ANIM_IDLE.get_parent().visible = false
 	ANIM_DIG.get_parent().visible = false
@@ -177,6 +173,8 @@ func do_animations(delta):
 	
 
 func _process(delta):
+	if health <= 0:
+		return
 	do_animations(delta)
 	
 	var global_pos = self.global_transform.origin
@@ -205,3 +203,17 @@ func _process(delta):
 
 		if not is_on_floor():
 			move_and_collide(-global_transform.basis.y.normalized() * gravity * delta)
+
+func damage(amount):
+	health -= amount
+	if health <= 0:
+		$DeathTimer.start()
+		$Particles.emitting = true
+		$Particles2.emitting = true
+		$Particles3.emitting = true
+		$Particles4.emitting = true
+		$Particles5.emitting = true
+		$MeshInstance.visible = false
+
+func _on_DeathTimer_timeout():
+	queue_free()

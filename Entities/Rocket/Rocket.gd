@@ -18,7 +18,7 @@ func _physics_process(delta):
 		axis_lock_motion_z = true
 		$MeshInstance.visible = false
 		$CollisionShape.disabled = true
-		if collision.collider is Enemy:
+		if collision.collider is Enemy or collision.collider is GraveDigger:
 			collision.collider.damage(dmg)
 		particle_timer.start()
 		

@@ -23,33 +23,33 @@ albedo_color = Color( 1, 0.925, 0.7, 0.313726 )
 [sub_resource type="SphereMesh" id=3]
 material = SubResource( 13 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=14]
 flags_transparent = true
 albedo_color = Color( 1, 0.631373, 0.372549, 0.313726 )
 
 [sub_resource type="SphereMesh" id=5]
-material = SubResource( 6 )
+material = SubResource( 14 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=15]
 flags_transparent = true
 albedo_color = Color( 0.992157, 0.870588, 0.521569, 0.313726 )
 
 [sub_resource type="SphereMesh" id=8]
-material = SubResource( 7 )
+material = SubResource( 15 )
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=16]
 flags_transparent = true
 albedo_color = Color( 0.27451, 0.203922, 0.290196, 0.313726 )
 
 [sub_resource type="SphereMesh" id=10]
-material = SubResource( 9 )
+material = SubResource( 16 )
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="SpatialMaterial" id=17]
 flags_transparent = true
 albedo_color = Color( 0.105882, 0.12549, 0.196078, 0.313726 )
 
 [sub_resource type="SphereMesh" id=12]
-material = SubResource( 11 )
+material = SubResource( 17 )
 
 [node name="Rocket" type="KinematicBody"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, -0.5, 0.5 )
