@@ -22,10 +22,10 @@ var move_or_not = [true, false]
 var start_move = move_or_not[randi() % move_or_not.size()]
 
 func _on_Area_body_entered(body):
-
-	if body.name == 'Player':
-		rot_speed = 0.1
-		harass = true
+	if body.name ==  'Player':
+		if body.alpha >= 1.0:
+			rot_speed = 0.1
+			harass = true
 
 
 func _process(delta):
@@ -34,7 +34,7 @@ func _process(delta):
 	var wtransform = self.global_transform.looking_at(Vector3(target_pos.x, global_pos.y, target_pos.z), Vector3.UP)
 	var wrotation = Quat(global_transform.basis).slerp(Quat(wtransform.basis), rot_speed)
 	if harass:
-		if $"../Player" != null:
+		if $"../Player" != null and $"../Player".alpha >= 1.0:
 			# face player
 			global_pos = self.global_transform.origin
 			target_pos = target.global_transform.origin
@@ -57,16 +57,16 @@ func _process(delta):
 			if start_move == true:
 				var velocity = global_transform.basis.z.normalized() * idle_speed * delta
 				move_and_collide(-velocity)
-			else:
-				# Enemy looks at the player when they escape
-				global_pos = self.global_transform.origin
-				target_pos = target.global_transform.origin
-				wtransform = self.global_transform.looking_at(Vector3(target_pos.x, global_pos.y, target_pos.z), Vector3.UP)
-				wrotation = Quat(global_transform.basis).slerp(Quat(wtransform.basis), rot_speed)
-				self.global_transform = Transform(Basis(wrotation), global_pos)
+		else:
+			# Enemy looks at the player when they escape
+			global_pos = self.global_transform.origin
+			target_pos = target.global_transform.origin
+			wtransform = self.global_transform.looking_at(Vector3(target_pos.x, global_pos.y, target_pos.z), Vector3.UP)
+			wrotation = Quat(global_transform.basis).slerp(Quat(wtransform.basis), rot_speed)
+			self.global_transform = Transform(Basis(wrotation), global_pos)
 
-				if not is_on_floor():
-					move_and_collide(-global_transform.basis.y.normalized() * gravity * delta)
+		if not is_on_floor():
+			move_and_collide(-global_transform.basis.y.normalized() * gravity * delta)
 				
 func _on_Area_body_exited(body):
 	if body.name == ('Player'):

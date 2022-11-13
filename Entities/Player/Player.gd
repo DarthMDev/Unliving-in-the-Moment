@@ -1,3 +1,5 @@
+class_name Player
+
 extends KinematicBody
 
 export(int) var MAX_SPEED = 10
