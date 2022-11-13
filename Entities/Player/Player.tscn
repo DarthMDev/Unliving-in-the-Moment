@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/cloth.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Weapons/Rocket Launcher/rocket_launcher.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://Weapons/Rocket Launcher/rocket.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://UserInterface.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SphereShape" id=3]
 
@@ -201,3 +202,7 @@ size = 20.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Ethereal = SubResource( 4 )
 anims/RESET = SubResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 5 )]
