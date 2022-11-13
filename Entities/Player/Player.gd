@@ -1,5 +1,4 @@
 class_name Player
-
 extends KinematicBody
 
 export(int) var MAX_SPEED = 10
@@ -11,7 +10,8 @@ export (int) var lives = 3
 export (int) var MAX_LIVES = 3
 onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
-onready var ANIMATION_PLAYER = $AnimationPlayer
+onready var ETHEREAL_PLAYER = $EtherealPlayer
+onready var ROCKET_LAUNCHER_PLAYER = $RocketLauncherPlayer
 
 onready var ROCKET_LAUNCHER_MESH = $ClothRotation/RocketLauncherMesh
 
@@ -42,7 +42,7 @@ func _ready():
 	# hide the cursor
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
-		ANIMATION_PLAYER.play("Ethereal")
+		ETHEREAL_PLAYER.play("Ethereal")
 	if lives == 0:
 		# TODO add death animation
 		# ANIMATION_PLAYER.play('Death')
@@ -59,9 +59,10 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		hidden_mouse = true
 
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing():
 		var rocket = ROCKET_SCENE.instance()
 		rocket.init($ClothRotation/RocketLauncherMesh/RocketMesh.global_translation, $ClothRotation/RocketLauncherMesh/RocketMesh.global_rotation)
+		ROCKET_LAUNCHER_PLAYER.play("Launch")
 		get_parent().add_child(rocket)
 	
 	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
@@ -109,11 +110,15 @@ func _physics_process(delta):
 	elif player.global_translation.y < -10:
 		# reset the scene
 		# get_tree().reload_current_scene()
+
 		player.global_translation = lastOnGroundPos
 		velocity = -lastOnGroundVel * 3
 		
 		fall_damage()
 		# minus_lives(1)
+    
+		player.translation = Vector3(1, 1, 1)
+
 		# TODO reset the player position nearest to their last position on the ground
 	
 func getMousePosition3D():
@@ -137,25 +142,21 @@ func checkLives():
 		# Game over
 	elif lives > MAX_LIVES:
 		lives = MAX_LIVES
-
 	else:
 		# Respawn and update lives GUI
 		pass
 		# get_tree().reload_current_scene()
-
 	livesSprite.region_rect  =  Rect2(0, livesToY[lives], 33, 11)
 
 func fall_damage():
 	lives -= 1
 	checkLives()
 
-func minus_lives(amount):
+func damage(amount):
 	if iframes <= 0:
 		lives -= amount
 		checkLives()
 		iframes = 0.1
-
-
 
 func get_lives():
 	return lives

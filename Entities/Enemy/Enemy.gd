@@ -1,6 +1,9 @@
 extends KinematicBody
+
+class_name Enemy
 # gravity
 var gravity = 15
+
 
 var xlocation = rand_range(-360, 360)
 var zlocation = rand_range(-360, 360)
@@ -12,7 +15,8 @@ var player_escape = false
 export (NodePath)  var AREAPATH
 onready var area = get_node(AREAPATH)
 # face the direction of the player
-onready var target = get_parent().get_node("Player")
+export(NodePath) var PLAYER_PATH
+onready var target = get_node(PLAYER_PATH)
 var rot_speed = 0.05
 # map navigation
 onready var agent: NavigationAgent = $agent
@@ -22,6 +26,8 @@ onready var ANIM_EQUIP = $MeshInstance/skeleton_equip_glonk/AnimationPlayer
 onready var ANIM_MARCH = $MeshInstance/skeleton_march/AnimationPlayer
 onready var ANIM_SHOOT = $MeshInstance/skeleton_shoot/AnimationPlayer
 
+onready var BULLET_SCENE = load("res://Entities/Bullet/Bullet.tscn")
+
 var equipped = false
 var equipping = false
 var fire_timer = 3
@@ -30,7 +36,6 @@ var clip = 5
 var max_clip = 5
 var shots = 0
 
-onready var target_location: Node = $"../Player"
 var speed = 5
 var minimum_speed = 3
 var idle_speed = rand_range(minimum_speed, speed)
@@ -38,25 +43,24 @@ var move_or_not = [true, false]
 var start_move = move_or_not[randi() % move_or_not.size()]
 
 var chasing = true
-
+export var MAX_HEALTH = 3
+export var health = 3
 func _ready():
-	# 
 	area.connect("body_entered", self, "on_body_entered")
 	area.connect("body_exited", self, "on_body_exited")
 
 func on_body_entered(body):
 	if body.name ==  'Player':
-		if body.alpha >= 1.0:
-			rot_speed = 0.1
-			harass = true
+		#if body.alpha >= 1.0:
+		rot_speed = 0.1
+		harass = true
 			
 func shoot_projectile():
-	#TODO: make it shoot
-	pass
-			
+	var bullet = BULLET_SCENE.instance()
+	bullet.init(global_translation + Vector3(0, 1, 0), global_rotation)
+	get_parent().add_child(bullet)
+
 func do_animations(delta):
-	
-	
 	ANIM_IDLE.get_parent().visible = false
 	ANIM_EQUIP.get_parent().visible = false
 	ANIM_MARCH.get_parent().visible = false
@@ -69,11 +73,10 @@ func do_animations(delta):
 	
 	var spaceState = get_world().direct_space_state
 	
-	var rayArray = spaceState.intersect_ray(global_translation + Vector3.UP, target.global_translation + Vector3.UP * 0.5)
+	#var rayArray = spaceState.intersect_ray(global_translation + Vector3.UP, target.global_translation + Vector3.UP * 0.5)
 	
-	if rayArray.has("collider"):
-		chase_timer = 1
-	
+	#if rayArray.has("collider"):
+		#chase_timer = 1
 	
 	if (attacking):
 		if !equipped:
@@ -131,10 +134,7 @@ func do_animations(delta):
 		
 	if chase_timer > 0:
 			chase_timer -= delta
-	
-	
-	
-	
+
 
 func _process(delta):
 	do_animations(delta)
@@ -144,7 +144,7 @@ func _process(delta):
 	var wrotation = Quat(global_transform.basis).slerp(Quat(wtransform.basis), rot_speed)
 	if harass:
 		if chasing:
-			if $"../Player" != null and $"../Player".alpha >= 1.0:
+			if target != null and target.alpha >= 1.0:
 				# face player
 				global_pos = self.global_transform.origin
 				target_pos = target.global_transform.origin
@@ -204,3 +204,8 @@ func _on_Timer2_timeout():
 	# enemy is going back to idle
 	player_escape = false			
 							
+func damage(dmg):
+	health -= dmg
+	if health <= 0:
+		# TODO play death animation
+		self.queue_free()

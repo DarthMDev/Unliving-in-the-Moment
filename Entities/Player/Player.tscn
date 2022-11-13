@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/cloth.obj" type="ArrayMesh" id=2]
@@ -51,6 +51,144 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Launch"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ClothRotation/RocketLauncherMesh/RocketMesh:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ClothRotation/RocketLauncherMesh:rotation_degrees:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1.27433e-06, -0.25, 0, 0.25, 0, -8.59048e-07, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ClothRotation/RocketLauncherMesh:rotation_degrees:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 90, -0.25, 0, 0.25, 0, 90, -0.25, 0, 0.25, 0, 90, -0.25, 0, 0.25, 0, 90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ClothRotation/RocketLauncherMesh:rotation_degrees:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -30, -0.25, 0, 0.25, 0, 20, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ClothRotation/RocketLauncherMesh:translation:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( -2.20189, -0.25, 0, 0.25, 0, -2.20189, -0.25, 0, 0.25, 0, -2.20189, -0.25, 0, 0.25, 0, -2.20189, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("ClothRotation/RocketLauncherMesh:translation:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( -0.5, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0, -1.2, -0.25, 0, 0.25, 0, -0.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6, 1 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("ClothRotation/RocketLauncherMesh:translation:z")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1.15, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6, 1 )
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ClothRotation/RocketLauncherMesh:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 6.48207e-07, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("ClothRotation/RocketLauncherMesh:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("ClothRotation/RocketLauncherMesh:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -15, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("ClothRotation/RocketLauncherMesh:translation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -2.20189, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("ClothRotation/RocketLauncherMesh:translation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( -0.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("ClothRotation/RocketLauncherMesh:translation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
 }
 
 [node name="Player" type="KinematicBody"]
@@ -185,12 +323,12 @@ attachments/34/spatial_attachment_path = NodePath("..")
 attachments/34/offset = Vector3( 0.750367, 1.19761, -0.535866 )
 
 [node name="RocketLauncherMesh" type="MeshInstance" parent="ClothRotation"]
-transform = Transform( 0.100969, 0, 0.994889, 0, 1, 0, -0.994889, 0, 0.100969, -2.20189, -0.5, 0.5 )
+transform = Transform( -4.515e-08, -3.85493e-10, 0.999999, -0.258819, 0.965926, -1.13133e-08, -0.965925, -0.258819, -4.37113e-08, -2.20189, -0.5, 1 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
 
 [node name="RocketMesh" type="MeshInstance" parent="ClothRotation/RocketLauncherMesh"]
-transform = Transform( 0.984261, 0, 0.176724, 0, 1, 0, -0.176724, 0, 0.984261, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, -8.88178e-16, 0, 0, 1, 0, 0, 0 )
 mesh = ExtResource( 4 )
 skeleton = NodePath("../..")
 
@@ -198,9 +336,13 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 15.8707, 9.09111 )
 size = 20.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="EtherealPlayer" type="AnimationPlayer" parent="."]
 anims/Ethereal = SubResource( 4 )
 anims/RESET = SubResource( 6 )
+
+[node name="RocketLauncherPlayer" type="AnimationPlayer" parent="."]
+anims/Launch = SubResource( 7 )
+anims/RESET = SubResource( 8 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -10,24 +10,30 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Entities/Enemy/Enemy.gd"
+}, {
+"base": "KinematicBody",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Entities/Player/Player.gd"
 } ]
 _global_script_class_icons={
+"Enemy": "",
 "Player": ""
 }
 
 [application]
 
 config/name="Unliving in the Moment"
-run/main_scene="res://Level/Level.tscn"
+run/main_scene="res://Level/Graveyard.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=384
-window/size/height=216
+window/size/width=320
+window/size/height=180
 window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="viewport"

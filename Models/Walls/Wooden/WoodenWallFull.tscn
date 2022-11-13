@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Models/Walls/Wooden/wooden_wall_full.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Walls/Wooden/wooden_wall.tres" type="Material" id=2]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 data = PoolVector3Array( 0, 1, 0, 0, 0, 0, 0, 1, -2, 0, 1, -2, 0, 0, 0, 0, 0, -2, 0, 1, -2, 0, 0, -2, 1, 1, -2, 1, 1, -2, 0, 0, -2, 1, 0, -2, 0, 1, -2, 1, 1, -2, 0, 1, 0, 0, 1, 0, 1, 1, -2, 1, 1, 0, 1, 0, -2, 0, 0, -2, 1, 0, 0, 1, 0, 0, 0, 0, -2, 0, 0, 0, 1, 1, -2, 1, 0, -2, 1, 1, 0, 1, 1, 0, 1, 0, -2, 1, 0, 0, 1, 0, 0, 1, 0, -2, 1, 9, 0, 1, 9, 0, 1, 0, -2, 1, 9, -2, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 2, 1, 0, 2, 0, 1, 2, 0, 1, 2, 1, 0, 2, 0, 0, 2, 1, 0, 0, 0, 0, 0, 1, 0, 2, 1, 0, 2, 0, 0, 0, 0, 0, 2, 0, 1, 0, 1, 1, 0, 0, 1, 2, 0, 1, 2, 1, 1, 0, 1, 1, 2, 1, 0, 2, 1, 0, 0, 1, 9, 2, 1, 9, 2, 1, 0, 0, 1, 9, 0, 0, 1, 2, 0, 0, 2, 0, 1, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1.0019, 1, -2, 1.0019, 0, -2, 1.0019, 1, 0, 1.0019, 1, 0, 1.0019, 0, -2, 1.0019, 0, 0, 1.0019, 1, 0, 1.0019, 0, 0, 1.0019, 1, 2, 1.0019, 1, 2, 1.0019, 0, 0, 1.0019, 0, 2 )
@@ -8,6 +9,8 @@ data = PoolVector3Array( 0, 1, 0, 0, 0, 0, 0, 1, -2, 0, 1, -2, 0, 0, 0, 0, 0, -2
 [node name="WoodenWallFull" type="MeshInstance"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
