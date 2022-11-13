@@ -11,7 +11,8 @@ export (int) var lives = 3
 export (int) var MAX_LIVES = 3
 onready var CLOTH: SoftBody = $ClothRotation/Cloth
 onready var CLOTH_ROTATION = $ClothRotation
-onready var ANIMATION_PLAYER = $AnimationPlayer
+onready var ETHEREAL_PLAYER = $EtherealPlayer
+onready var ROCKET_LAUNCHER_PLAYER = $RocketLauncherPlayer
 
 onready var ROCKET_SCENE = load("res://Entities/Rocket/Rocket.tscn")
 
@@ -36,7 +37,7 @@ func _ready():
 	hidden_mouse = true
 func _process(delta):
 	if Input.is_action_just_pressed("ethereal"):
-		ANIMATION_PLAYER.play("Ethereal")
+		ETHEREAL_PLAYER.play("Ethereal")
 	if lives == 0:
 		# TODO add death animation
 		# ANIMATION_PLAYER.play('Death')
@@ -53,9 +54,10 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		hidden_mouse = true
 
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and not ROCKET_LAUNCHER_PLAYER.is_playing():
 		var rocket = ROCKET_SCENE.instance()
 		rocket.init($ClothRotation/RocketLauncherMesh/RocketMesh.global_translation, $ClothRotation/RocketLauncherMesh/RocketMesh.global_rotation)
+		ROCKET_LAUNCHER_PLAYER.play("Launch")
 		get_parent().add_child(rocket)
 	
 	material.albedo_color = Color(1.0, 1.0, 1.0, alpha)
