@@ -17,7 +17,7 @@ onready var ANIM_WALK = $MeshInstance/gravedigger_walk/AnimationPlayer
 onready var ANIM_SMASH = $MeshInstance/gravedigger_smash/AnimationPlayer
 onready var SHOCKWAVE = $MeshInstance/shockwave/AnimationPlayer
 
-export(int) var health = 10
+export(int) var health = 15
 
 var chase_timer = 0.0
 
@@ -76,13 +76,14 @@ func do_animations(delta):
 	
 	if state == STATE_SPEECH:
 		
-		if !$AudioStreamPlayer.playing:
+		if !$AudioStreamPlayer.playing and not get_tree().current_scene.heardSpeech:
 			$AudioStreamPlayer.play()
 		
-		if time_in_state > 21.35:
+		if time_in_state > 21.35 or get_tree().current_scene.heardSpeech:
 			global_translation += Vector3(0, 10, 0)
 			set_state(STATE_FOLLOWING)
 			$AudioStreamPlayer.stop()
+			get_tree().current_scene.heardSpeech = true
 			
 	elif state == STATE_IDLE:
 		ANIM_IDLE.get_parent().visible = true

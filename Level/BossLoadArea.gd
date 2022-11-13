@@ -7,5 +7,5 @@ func _on_BossLoadArea_body_entered(body):
 		$CollisionShape.disabled = true
 		$"../../BossBridge".visible = false
 		var boss = BOSS_SCENE.instance()
-		boss.global_translation = Vector3(-15, -2.5, -245)
+		boss.global_translation = Vector3(-15, 20, -240)
 		get_parent().get_parent().add_child(boss)

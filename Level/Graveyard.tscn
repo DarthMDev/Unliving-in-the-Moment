@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Models/Floors/Stone/StoneFloor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Models/Walls/Wooden/WoodenWallRight.tscn" type="PackedScene" id=2]
@@ -104,6 +104,27 @@ data = PoolVector3Array( 1.6244, 0, 0.546, 2, 0, 0.4287, 1.3474, 0, 0.8839, 1.34
 [sub_resource type="BoxShape" id=21]
 
 [sub_resource type="BoxShape" id=22]
+
+[sub_resource type="ConcavePolygonShape" id=25]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
+
+[sub_resource type="ConcavePolygonShape" id=26]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
+
+[sub_resource type="ConcavePolygonShape" id=27]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
+
+[sub_resource type="ConcavePolygonShape" id=28]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
+
+[sub_resource type="ConcavePolygonShape" id=29]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
+
+[sub_resource type="ConcavePolygonShape" id=30]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
+
+[sub_resource type="ConcavePolygonShape" id=31]
+data = PoolVector3Array( -2, 0, -2, 2, 0, -2, -2, 0, -0.565, -2, 0, -0.565, 2, 0, -2, -1.7228, 0, -0.436, -1.7228, 0, -0.436, 2, 0, -2, -1.2319, 0, -0.6566, -1.2319, 0, -0.6566, 2, 0, -2, -0.7867, 0, -0.0488, -0.7867, 0, -0.0488, 2, 0, -2, -0.3151, 0, -0.4377, -0.3151, 0, -0.4377, 2, 0, -2, 0.0544, 0, -0.8095, 0.0544, 0, -0.8095, 2, 0, -2, 0.9534, 0, -0.1532, 0.9534, 0, -0.1532, 2, 0, -2, 2, 0, -0.5713, -1.7228, 0, -0.436, -1.2319, 0, -0.6566, -1.7228, -8, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.3151, 0, -0.4377, -0.7867, -8, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.9534, 0, -0.1532, 0.0544, -8, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 0.9534, -8, -0.1532, -2, 0, -0.565, -1.7228, 0, -0.436, -2, -8, -0.565, -2, -8, -0.565, -1.7228, 0, -0.436, -1.7228, -8, -0.436, -1.2319, 0, -0.6566, -0.7867, 0, -0.0488, -1.2319, -8, -0.6566, -1.2319, -8, -0.6566, -0.7867, 0, -0.0488, -0.7867, -8, -0.0488, -0.3151, 0, -0.4377, 0.0544, 0, -0.8095, -0.3151, -8, -0.4377, -0.3151, -8, -0.4377, 0.0544, 0, -0.8095, 0.0544, -8, -0.8095, 0.9534, 0, -0.1532, 2, 0, -0.5713, 0.9534, -8, -0.1532, 0.9534, -8, -0.1532, 2, 0, -0.5713, 2, -8, -0.5713, 2, -8, -0.5713, 2, 0, -0.5713, 2, -8, -2.0323, 2, -8, -2.0323, 2, 0, -0.5713, 2, 0, -2.0323, -2, 0, -0.565, -2, -8, -0.565, -2, 0, -2.026, -2, 0, -2.026, -2, -8, -0.565, -2, -8, -2.026 )
 
 [sub_resource type="BoxShape" id=23]
 
@@ -3198,6 +3219,18 @@ skeleton = NodePath("../../..")
 [node name="StoneWall3" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 0, -62.35 )
 
+[node name="StoneWall7" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.5, 0, -121.85 )
+
+[node name="StoneWall10" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.5, 0, -141.35 )
+
+[node name="StoneWall8" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, -121.85 )
+
+[node name="StoneWall9" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -6.5, 0, -131.35 )
+
 [node name="StoneWall4" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -62.35 )
 
@@ -3209,6 +3242,21 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28, 0,
 
 [node name="Fence4" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 0, -62.5 )
+
+[node name="Fence8" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5, 0, -121.5 )
+
+[node name="Fence10" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -14.5, 0, -138.5 )
+
+[node name="Fence11" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( 0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, -9.29999, 0, -132.8 )
+
+[node name="Fence12" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -12, 0, -136 )
+
+[node name="Fence9" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, -121.5 )
 
 [node name="Fence5" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
 transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -9, 0, -48 )
@@ -3243,6 +3291,26 @@ skeleton = NodePath("../../..")
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16, 0, -62 )
 skeleton = NodePath("../../..")
 
+[node name="FenceEnd4" parent="NavigationMeshInstance/Walls" instance=ExtResource( 28 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.5, 0, -121.5 )
+skeleton = NodePath("../../..")
+
+[node name="StoneWall11" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.5, 0, -155.35 )
+
+[node name="StoneWall12" parent="NavigationMeshInstance/Walls" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, -155.35 )
+
+[node name="Fence13" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5, 0, -155 )
+
+[node name="Fence14" parent="NavigationMeshInstance/Walls" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, -155 )
+
+[node name="FenceEnd5" parent="NavigationMeshInstance/Walls" instance=ExtResource( 28 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.5, 0, -155 )
+skeleton = NodePath("../../..")
+
 [node name="FenceEnd3" parent="NavigationMeshInstance/Walls" instance=ExtResource( 28 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -24, 0, -44.5 )
 skeleton = NodePath("../../..")
@@ -3253,6 +3321,10 @@ skeleton = NodePath("../../..")
 
 [node name="StoneWallCorner" parent="NavigationMeshInstance/Walls" instance=ExtResource( 39 )]
 transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -6.5, 0, -50.5 )
+skeleton = NodePath("../StoneWall5")
+
+[node name="StoneWallCorner2" parent="NavigationMeshInstance/Walls" instance=ExtResource( 39 )]
+transform = Transform( -1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, -16.65, 0, -141.4 )
 skeleton = NodePath("../StoneWall5")
 
 [node name="Graves" type="Spatial" parent="NavigationMeshInstance"]
@@ -3297,7 +3369,7 @@ texture = ExtResource( 13 )
 transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 8.5 )
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationMeshInstance/Graves/StoneWall11"]
-transform = Transform( -1.74846e-08, 0.0348623, -0.398478, -3.09639e-16, 0.398478, 0.0348623, 0.4, 1.52388e-09, -1.7418e-08, -1, 0.965926, 0.258819 )
+transform = Transform( -1.74846e-08, 0.0900213, -0.389739, 4.80642e-15, 0.389739, 0.0900213, 0.4, 3.93496e-09, -1.7036e-08, -1.11775, 0.965926, 0.0214568 )
 texture = ExtResource( 11 )
 
 [node name="StoneWall12" parent="NavigationMeshInstance/Graves" instance=ExtResource( 7 )]
@@ -3842,10 +3914,88 @@ shape = SubResource( 19 )
 [node name="Decorations" type="Spatial" parent="."]
 
 [node name="Skull" parent="Decorations" instance=ExtResource( 16 )]
-transform = Transform( 0.12941, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, 0.12941, -16.5, 3.5, -45 )
+transform = Transform( 0.25, 0, -0.433013, 0.0751919, 0.492404, 0.0434121, 0.426434, -0.0868241, 0.246202, -17.5, 5.1, -44.7 )
+
+[node name="Skull3" parent="Decorations" instance=ExtResource( 16 )]
+transform = Transform( 1.48338, -0.250727, -1.31785, 0.446151, 1.94512, 0.132122, 1.26512, -0.391974, 1.49861, -26, 1.6, -113.7 )
 
 [node name="BonePile" parent="Decorations" instance=ExtResource( 19 )]
 transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -20.5, 0, 29.5 )
+
+[node name="BonePile10" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 3.5, 0, 17.5 )
+
+[node name="BonePile11" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 16, 0, -10 )
+
+[node name="BonePile12" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 23, 0, -18 )
+
+[node name="BonePile13" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 23, 0, -36.5 )
+
+[node name="BonePile14" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 10, 0, -30.5 )
+
+[node name="BonePile15" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -2.5, 0, -41 )
+
+[node name="BonePile16" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -21.5, 0, -31 )
+
+[node name="BonePile17" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -25, 0, -57 )
+
+[node name="BonePile18" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -25, 0, -76 )
+
+[node name="BonePile19" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -42, 0, -81.5 )
+
+[node name="BonePile20" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -55.5, 0, -76.5 )
+
+[node name="BonePile21" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -40, 0, -103.5 )
+
+[node name="BonePile22" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -58, 0, -113.5 )
+
+[node name="BonePile23" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -1.5, 0, -109.5 )
+
+[node name="BonePile24" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 5.96046e-08, 0, -1, 0, 1, 0, 1, 0, 5.96046e-08, 11.5, 0, -100.5 )
+
+[node name="BonePile25" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, 28.5, 0, -111.5 )
+
+[node name="BonePile26" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, 0.5, 21, 0, -82 )
+
+[node name="BonePile27" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 27.5, 0, -67.5 )
+
+[node name="BonePile28" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 8.5, 0, -71.5 )
+
+[node name="BonePile29" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -48, 0, -68.5 )
+
+[node name="BonePile30" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -18.5, 0, -131.5 )
+
+[node name="BonePile31" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -10, 0, -149.5 )
+
+[node name="BonePile32" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -8.5, 0, -170 )
+
+[node name="BonePile33" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -18.5, 0, -174.5 )
+
+[node name="BonePile34" parent="Decorations" instance=ExtResource( 19 )]
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -15.5, 0, -161 )
 
 [node name="BonePile2" parent="Decorations" instance=ExtResource( 19 )]
 transform = Transform( 0.866025, 0, -0.5, -0.12941, 0.965926, -0.224144, 0.482963, 0.258819, 0.836516, 6.5, -0.15, 27 )
@@ -3972,22 +4122,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -156.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor567" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor568" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor569" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor570" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor571" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -156.015 )
 skeleton = NodePath("../..")
@@ -4002,22 +4136,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor574" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor575" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor576" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor577" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -156.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor578" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -156.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor579" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4052,22 +4170,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -160.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor587" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor588" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor589" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor590" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor591" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -160.015 )
 skeleton = NodePath("../..")
@@ -4082,22 +4184,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor594" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor595" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor596" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor597" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -160.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor598" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -160.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor599" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4132,22 +4218,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -164.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor607" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor608" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor609" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor610" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor611" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -164.015 )
 skeleton = NodePath("../..")
@@ -4162,22 +4232,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor614" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor615" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor616" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor617" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -164.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor618" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -164.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor619" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4212,22 +4266,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -168.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor627" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor628" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor629" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor630" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor631" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -168.015 )
 skeleton = NodePath("../..")
@@ -4242,22 +4280,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor634" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor635" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor636" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor637" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -168.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor638" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -168.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor639" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4292,22 +4314,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -172.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor647" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor648" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor649" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor650" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor651" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -172.015 )
 skeleton = NodePath("../..")
@@ -4322,22 +4328,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor654" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor655" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor656" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor657" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -172.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor658" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -172.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor659" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4372,22 +4362,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -176.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor667" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor668" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor669" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor670" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor671" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -176.015 )
 skeleton = NodePath("../..")
@@ -4402,22 +4376,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor674" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor675" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor676" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor677" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -176.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor678" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -176.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor679" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4452,22 +4410,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -180.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor687" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor688" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor689" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor690" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor691" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -180.015 )
 skeleton = NodePath("../..")
@@ -4482,22 +4424,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor694" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor695" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor696" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor697" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -180.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor698" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -180.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor699" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4532,22 +4458,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -184.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor707" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor708" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor709" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor710" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor711" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -184.015 )
 skeleton = NodePath("../..")
@@ -4562,22 +4472,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor714" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor715" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor716" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor717" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -184.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor718" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -184.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor719" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4612,22 +4506,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -188.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor727" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor728" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor729" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor730" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor731" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -188.015 )
 skeleton = NodePath("../..")
@@ -4642,22 +4520,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor734" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor735" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor736" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor737" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -188.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor738" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -188.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor739" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4692,22 +4554,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -192.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor747" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor748" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor749" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor750" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor751" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -192.015 )
 skeleton = NodePath("../..")
@@ -4722,22 +4568,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor754" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor755" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor756" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor757" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -192.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor758" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -192.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor759" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4772,22 +4602,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -196.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor767" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor768" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor769" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor770" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor771" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -196.015 )
 skeleton = NodePath("../..")
@@ -4802,22 +4616,6 @@ skeleton = NodePath("../..")
 
 [node name="StoneFloor774" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor775" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor776" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor777" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -196.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor778" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -196.015 )
 skeleton = NodePath("../..")
 
 [node name="StoneFloor779" parent="BossRoom" instance=ExtResource( 1 )]
@@ -4852,22 +4650,6 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -200.015 )
 skeleton = NodePath("../..")
 
-[node name="StoneFloor787" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor788" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor789" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor790" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
 [node name="StoneFloor791" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -200.015 )
 skeleton = NodePath("../..")
@@ -4883,710 +4665,6 @@ skeleton = NodePath("../..")
 [node name="StoneFloor794" parent="BossRoom" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -200.015 )
 skeleton = NodePath("../..")
-
-[node name="StoneFloor795" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor796" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor797" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor798" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -200.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor799" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor800" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor801" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor802" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor803" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor804" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor805" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor806" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor807" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor808" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor809" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor810" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor811" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor812" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor813" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor814" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor815" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor816" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor817" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor818" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -204.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor819" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor820" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor821" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor822" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor823" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor824" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor825" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor826" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor827" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor828" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor829" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor830" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor831" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor832" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor833" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor834" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor835" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor836" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor837" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor838" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -208.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor839" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor840" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor841" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor842" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor843" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor844" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor845" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor846" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor847" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor848" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor849" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor850" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor851" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor852" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor853" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor854" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor855" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor856" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor857" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor858" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -212.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor859" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor860" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor861" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor862" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor863" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor864" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor865" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor866" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor867" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor868" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor869" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor870" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor871" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor872" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor873" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor874" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor875" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor876" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor877" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor878" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -216.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor879" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor880" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor881" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor882" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor883" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor884" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor885" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor886" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor887" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor888" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor889" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor890" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor891" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor892" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor893" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor894" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor895" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor896" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor897" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor898" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -220.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor899" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor900" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor901" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor902" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor903" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor904" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor905" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor906" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor907" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor908" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor909" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor910" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor911" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor912" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor913" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor914" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor915" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor916" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor917" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor918" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -224.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor919" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor920" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor921" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor922" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor923" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor924" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor925" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor926" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor927" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor928" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor929" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor930" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor931" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor932" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor933" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor934" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor935" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor936" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor937" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor938" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -228.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor939" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor940" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor941" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor942" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor943" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor944" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor945" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor946" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor947" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor948" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor949" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor950" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor951" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor952" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor953" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor954" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor955" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor956" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor957" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="StoneFloor958" parent="BossRoom" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -232.015 )
-skeleton = NodePath("../..")
-
-[node name="hole_43" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_43"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_43/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_44" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_44/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_45" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_45"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_45/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_46" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_46"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_46/StaticBody"]
-shape = SubResource( 15 )
 
 [node name="hole_47" type="MeshInstance" parent="BossRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, -2, -152.01 )
@@ -5620,11 +4698,9 @@ material/0 = ExtResource( 21 )
 material/1 = ExtResource( 22 )
 
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_49"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -152.01 )
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_49/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -152.01 )
-shape = SubResource( 15 )
+shape = SubResource( 25 )
 
 [node name="hole_50" type="MeshInstance" parent="BossRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2, -152.01 )
@@ -5734,104 +4810,8 @@ material/1 = ExtResource( 22 )
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_58/StaticBody"]
 shape = SubResource( 15 )
 
-[node name="hole_59" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_59"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_59/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_60" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_60"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_60/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_61" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_61"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_61/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_62" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -2, -152.01 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_62"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_62/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_63" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_63"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_63/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_64" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_64"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_64/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_65" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 33.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_65"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_65/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_66" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_66"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_66/StaticBody"]
-shape = SubResource( 15 )
-
 [node name="hole_67" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5843,7 +4823,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_68" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5855,7 +4835,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_69" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5867,7 +4847,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_70" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5879,7 +4859,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_71" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5891,7 +4871,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_72" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5903,7 +4883,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_73" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5915,7 +4895,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_74" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5927,7 +4907,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_75" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5939,7 +4919,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_76" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5951,7 +4931,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_77" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5963,7 +4943,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_78" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.5, -2, -236 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.5, -2, -204 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -5974,56 +4954,8 @@ material/1 = ExtResource( 22 )
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_78/StaticBody"]
 shape = SubResource( 15 )
 
-[node name="hole_79" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_79"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_79/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_80" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -26.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_80"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_80/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_81" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_81"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_81/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_82" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -34.5, -2, -236 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_82"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_82/StaticBody"]
-shape = SubResource( 15 )
-
 [node name="hole_83" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -156 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -156 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6035,7 +4967,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_84" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -160 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -160 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6047,7 +4979,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_85" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -164 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -164 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6059,7 +4991,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_86" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -168 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -168 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6071,7 +5003,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_87" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -172 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -172 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6083,7 +5015,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_88" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -176 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -176 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6095,7 +5027,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_89" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -180 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -180 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6107,7 +5039,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_90" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -184 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -184 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6119,7 +5051,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_91" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -188 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -188 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6131,7 +5063,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_92" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -192 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -192 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6143,7 +5075,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_93" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -196 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -196 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6155,7 +5087,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_94" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -200 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.5, -2, -200 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6166,200 +5098,8 @@ material/1 = ExtResource( 22 )
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_94/StaticBody"]
 shape = SubResource( 15 )
 
-[node name="hole_95" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -204 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_95"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_95/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_96" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -208 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_96"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_96/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_97" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -212 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_97"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_97/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_98" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -216 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_98"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_98/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_99" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -220 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_99"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_99/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_100" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -224 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_100"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_100/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_101" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -228 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_101"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_101/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_102" type="MeshInstance" parent="BossRoom"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.5, -2, -232 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_102"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_102/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_103" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -232 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_103"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_103/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_104" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -228 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_104"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_104/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_105" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -224 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_105"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_105/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_106" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -220 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_106"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_106/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_107" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -216 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_107"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_107/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_108" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -212 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_108"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_108/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_109" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -208 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_109"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_109/StaticBody"]
-shape = SubResource( 15 )
-
-[node name="hole_110" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -204 )
-mesh = ExtResource( 20 )
-skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
-material/0 = ExtResource( 21 )
-material/1 = ExtResource( 22 )
-
-[node name="StaticBody" type="StaticBody" parent="BossRoom/hole_110"]
-
-[node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_110/StaticBody"]
-shape = SubResource( 15 )
-
 [node name="hole_111" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -200 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -200 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6371,7 +5111,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_112" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -196 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -196 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6383,7 +5123,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_113" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -192 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -192 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6395,7 +5135,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_114" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -188 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -188 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6407,7 +5147,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_115" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -184 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -184 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6419,7 +5159,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_116" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -180 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -180 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6431,7 +5171,7 @@ material/1 = ExtResource( 22 )
 shape = SubResource( 15 )
 
 [node name="hole_117" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -176 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -176 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6440,10 +5180,10 @@ material/1 = ExtResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_117"]
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_117/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 26 )
 
 [node name="hole_118" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -172 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -172 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6452,10 +5192,10 @@ material/1 = ExtResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_118"]
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_118/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 27 )
 
 [node name="hole_119" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -168 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -168 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6464,10 +5204,10 @@ material/1 = ExtResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_119"]
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_119/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 28 )
 
 [node name="hole_120" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -164 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -164 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6476,10 +5216,10 @@ material/1 = ExtResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_120"]
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_120/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 29 )
 
 [node name="hole_121" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -160 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -160 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6488,10 +5228,10 @@ material/1 = ExtResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_121"]
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_121/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 30 )
 
 [node name="hole_122" type="MeshInstance" parent="BossRoom"]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -38.5, -2, -156 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.5, -2, -156 )
 mesh = ExtResource( 20 )
 skeleton = NodePath("../../NavigationMeshInstance/Holes/hole_2")
 material/0 = ExtResource( 21 )
@@ -6500,7 +5240,7 @@ material/1 = ExtResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="BossRoom/hole_122"]
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom/hole_122/StaticBody"]
-shape = SubResource( 15 )
+shape = SubResource( 31 )
 
 [node name="Areas" type="Spatial" parent="."]
 
@@ -6640,6 +5380,9 @@ texture = ExtResource( 26 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 4.5, 39 )
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -234.5 )
 
 [connection signal="body_entered" from="Areas/BossLoadArea" to="Areas/BossLoadArea" method="_on_BossLoadArea_body_entered"]
 [connection signal="body_entered" from="Areas/CheckpointArea" to="Areas/CheckpointArea" method="_on_CheckpointArea_body_entered"]
