@@ -1,6 +1,9 @@
 extends KinematicBody
+
+class_name Enemy
 # gravity
 var gravity = 15
+
 
 var xlocation = rand_range(-360, 360)
 var zlocation = rand_range(-360, 360)
@@ -38,7 +41,8 @@ var move_or_not = [true, false]
 var start_move = move_or_not[randi() % move_or_not.size()]
 
 var chasing = true
-
+export var MAX_HEALTH = 100
+export var health = 100
 func _ready():
 	# 
 	area.connect("body_entered", self, "on_body_entered")
@@ -203,3 +207,8 @@ func _on_Timer2_timeout():
 	# enemy is going back to idle
 	player_escape = false			
 							
+func damage(dmg):
+	health -= dmg
+	if health <= 0:
+		# TODO play death animation
+		self.queue_free()

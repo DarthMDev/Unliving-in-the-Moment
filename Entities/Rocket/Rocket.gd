@@ -2,7 +2,7 @@ extends KinematicBody
 
 export(int) var SPEED = 10
 export(Array) var PARTICLES = []
-
+export (int) var dmg = 3
 onready var particle_timer = $ParticleTimer
 
 func init(start_translation: Vector3, start_rotation: Vector3):
@@ -19,7 +19,8 @@ func _physics_process(delta):
 		axis_lock_motion_z = true
 		$MeshInstance.visible = false
 		$CollisionShape.disabled = true
-		
+		if collision.collider is Enemy:
+			collision.collider.damage(dmg)
 		particle_timer.start()
 		
 		for particle in PARTICLES:
